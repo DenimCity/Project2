@@ -5,7 +5,8 @@ mongoose.connect('mongodb://localhost/style', {
   useMongoClient: true
 })
 
-const User = require('./models/user')
+const User = require('./routes/user')
+const styles = require('/routes')
 
 mongoose.Promise = global.Promise
 
@@ -54,10 +55,6 @@ User.remove()
   .then(() => {
     console.log('seeds are planted')
     return Eman.save()
-  })
-  .then(() => {
-    console.log('seeds are planted')
-    return peri.save()
     mongoose.connection.close()
   })
   .catch(err => {
