@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/style', {
   useMongoClient: true
 })
 
-const User = require('./routes/User')
+const User = require('./routes/Users')
 const styles = require('/routes')
 
 mongoose.Promise = global.Promise
@@ -18,6 +18,7 @@ const Jean = new User({
   twitterUrl:'https://twitter.com/jeanlikedenim',
   location:'Atlanta, Georgia',
   photoUrl: 'https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19436484_294868254308560_4898463097905217536_n.jpg',
+    
   
   
   styles: [{
@@ -34,7 +35,6 @@ const Eman = new User({
   twitterUrl:'https://twitter.com/theonly_EA',
   location:'Atlanta, Georgia',
   photoUrl: 'https://imgur.com/KzXEukR',
-  
   
   styles: [{
     look1: 'https://imgur.com/S2YWvh5',
