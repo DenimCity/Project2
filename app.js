@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const mongoose = require('mongoose')
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
@@ -69,8 +70,4 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
-/// Starting server
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log(`Express app listening on port ${PORT}`)
-})
+module.exports = app
