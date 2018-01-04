@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const index = require('./routes/index')
-const users = require('./routes/users')
+const Users = require('./routes/Users')
 
 const app = express()
 
@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 app.use('/', index)
-app.use('/users', users)
+app.use('/Users', Users)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
