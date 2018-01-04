@@ -8,8 +8,8 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
-const index = require('./routes/index')
-const Users = require('./routes/Users')
+const index = require('./routes/indexController')
+const Users = require('./routes/usersController')
 
 const app = express()
 
