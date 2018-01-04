@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/style', {
   useMongoClient: true
 })
 
-const User = require('./routes/user')
+const User = require('./routes/User')
 const styles = require('/routes')
 
 mongoose.Promise = global.Promise
