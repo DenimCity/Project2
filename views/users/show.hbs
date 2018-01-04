@@ -1,0 +1,35 @@
+<div>
+  {{#each users}}
+  <div>
+    <h3>
+      {{this.firstName}} {{}}
+    </h3>
+    <div>
+      First Name: {{this.firstNname}}
+    </div>
+    <div>
+      Last Name: {{this.lastName}}
+    </div>
+    <div>
+      Instagram: {{this.instagramUrl}}
+    </div>
+    <div>
+      Twitter: {{this.twitterUrl}}
+    </div>
+
+    <div>
+      Location: {{this.location}}
+    </div>
+
+    <div>
+      Photo: {{this.photoUrl}}
+    </div>
+
+
+    <div>
+      <a href="/users/{{this._id}}" View></a>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
