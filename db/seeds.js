@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI)
   const Jean = new User({
     firstName: 'Jean',
     lastName: 'Altidor',
-    instragramUrl:'https://www.instagram.com/jeanlikedenim/',
+    instagramUrl:'https://www.instagram.com/jeanlikedenim/',
     twitterUrl:'https://twitter.com/jeanlikedenim',
     location:'Atlanta, Georgia',
     photoUrl: 'https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19436484_294868254308560_4898463097905217536_n.jpg',
@@ -50,7 +50,7 @@ mongoose.connect(process.env.MONGODB_URI)
   const Eman = new User({
     firstName: 'Emanuella',
     lastName: 'Altidor',
-    instragramUrl:'https://www.instagram.com/theonly_ea/',
+    instagramUrl:'https://www.instagram.com/theonly_ea/',
     twitterUrl:'https://twitter.com/theonly_EA',
     location:'Atlanta, Georgia',
     photoUrl: 'https://imgur.com/KzXEukR',
@@ -79,19 +79,21 @@ mongoose.connect(process.env.MONGODB_URI)
 User.remove()
   .then(() => {
     return User.remove()
+    console.log('the seeds have been removed')
   })
   .then(() => {
-    console.log('seeds are planted')
     return Jean.save()
+    console.log('1st seed are planted')
+    
   })
   .then(() => {
-    console.log('seeds are planted')
     return Eman.save()
+    console.log('2nd seed  planted')
     mongoose.connection.close()
     console.log(`
     Finished seeding database...
     
-    Disconnected from MongoDB
+    Disconnected from MongoDB Connection
   `)
   })
   .catch(err => {
