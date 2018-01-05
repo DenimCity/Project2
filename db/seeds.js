@@ -20,20 +20,6 @@ mongoose.connect(process.env.MONGODB_URI)
     process.exit(-1)
   })
 
-
-
-//seed file is all just dumby date to preload you database
-//how i delete the users , and make some fake one to test that my files will save to my database
-User.remove ()
-.then(()=> {
-  console.log('users removed')
-  return Jean.save()
-})
-
-
-
-
-
   const Jean = new User({
     firstName: 'Jean',
     lastName: 'Altidor',
@@ -69,34 +55,46 @@ User.remove ()
     location:'Atlanta, Georgia',
     photoUrl: 'https://imgur.com/KzXEukR',
     Influencer: [{
-      name:'',
-      instagramUrl:'',
-      location:'',
-      photoURl:'',
+      name:'Rasheeda',
+      instagramUrl:'https://www.instagram.com/rasheedadabosschick/?hl=en',
+      location:'Atlanta',
+      photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
       Style: [{
-        top:'',
-        topInfo:'',
-        img1:'',
-        bottom:
-        bottomInfo:'',
-        img2:'',
-        shoe:'',
-        img3:'',
-        userUpload:'',
+        top:'Polo Tee',
+        topInfo:'Raulph Lauren',
+        img1:'https://s7.ralphlauren.com/is/image/PoloGSI/s7-1246337_lifestyle?$rl_470_pdp$',
+        bottom:'Mid Thighs',
+        bottomInfo:'Banana Republic',
+        img2:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrn-9y1B3TtCQCvgF1ZcbDFirOcr87N1vaVMrgtVUbcTGra9syQ',
+        shoe:'Wedges',
+        img3:'https://gloimg.trendsgal.com/TR/201308/source-img/1376075226875-P-1008521.jpg',
+        userUpload:'https://www.instagram.com/p/7aS4C1C0Zl/?taken-by=theonly_ea',
       }]
     }]
     
 
 })
-
-.catch((error) => {
-  console.log('!!!!! ERROR SAVING SEEDED DATA !!!!!')
-  console.log(error)
-}).then(() => {
-  mongoose.connection.close()
-  console.log(`
-      Finished seeding database...
-      
-      Disconnected from MongoDB
-    `)
-})
+//seed file is all just dumby date to preload you database
+//how i delete the users , and make some fake one to test that my files will save to my database
+User.remove()
+  .then(() => {
+    return User.remove()
+  })
+  .then(() => {
+    console.log('seeds are planted')
+    return Jean.save()
+  })
+  .then(() => {
+    console.log('seeds are planted')
+    return Eman.save()
+    mongoose.connection.close()
+    console.log(`
+    Finished seeding database...
+    
+    Disconnected from MongoDB
+  `)
+  })
+  .catch(err => {
+    console.log('!!!!! Houston, we have a problem, ERROR SAVING SEEDED DATA !!!!!')
+    console.log(err)
+  })
