@@ -3,10 +3,10 @@ const router = express.Router({mergeParams: true})
 const Style = require('../db/models/Style')
 
 /* GET Users listing. */
-router.get('/users', function(req, res, next) {
+router.get('/users', (req, res, next)=> {
   
-  res.send('resp')
-  res.render('/stylers/show')
+  res.send('hi from the style controller')
+  
 })
 
 module.exports = router

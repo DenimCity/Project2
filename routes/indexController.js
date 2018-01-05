@@ -1,10 +1,11 @@
 const express = require('express')
-const router = express.Router({mergeParams: true})
+const router = express.Router()
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   // res.render('index', { title: 'Express' })
-  res.show('I think this is a way of showing that this route works')
+  res.send('index controller works')
+  
 })
 
 module.exports = router
