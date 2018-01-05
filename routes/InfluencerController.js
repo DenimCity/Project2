@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router({mergeParams: true})
-const Influencer = require('../db/models/Influencer')
+const influencer = require('../db/models/Influencer')
 
 /* GET Users listing. */
-router.get('/influencers', function(req, res, next) {
+router.get('/Influencer', (req, res, next)=> {
   
-
-  res.render('/influencers/show')
+  res.send('hi from the Influencer controller')
+  
 })
 
 module.exports = router
