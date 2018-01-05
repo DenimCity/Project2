@@ -132,5 +132,5 @@ const UserSchema = new Schema({
 module.exports = {
   UserSchema,
   StyleSchema,
-  InfluencerSchema,
+  InfluencerSchema
 }
