@@ -45,7 +45,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
-app.use('/', index)
+
 // app.use('/users', userController)
 
 // catch 404 and forward to error handler
@@ -56,7 +56,16 @@ app.use(function(req, res, next) {
 })
 
 
-///Register routes
+//Register routes and controllers
+//the combination directly below controlls refer to the index page "index aka home page"
+const indexController = require('./routes/indexController')
+app.use('/', index)
+
+app.get('/', (request, response) => {
+  response.redirect('/index')
+})
+
+
 // const userController = require('./routes/userController')
 // app.use('/users', userController)
 
@@ -67,9 +76,7 @@ app.use(function(req, res, next) {
 // app.use('/users/:userId/stores/:storeId/gifts', giftsController )
 
 // Automatically redirect to the index page
-app.get('/', (request, response) => {
-  response.redirect('/index')
-})
+
 
 
 
