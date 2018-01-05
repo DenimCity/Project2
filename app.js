@@ -8,12 +8,29 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
-const index = require('./routes/indexController')
-const User = require('./routes/userController')
-const Influencer = require('./routes/influencerController')
-const Style = require('./routes/styleController')
+
 
 const app = express()
+//  ///Automatically redirect to the index page
+//  app.get('/', (request, response) => {
+//    response.redirect('')
+//  })
+const indexController = require('./routes/indexController')
+app.use('/', indexController)
+
+
+
+const userController = require('./routes/userController')
+app.use('/users', userController)
+
+const influencerController = require('./routes/influencerController')
+app.use('/users/:userId/influencer', influencerController)
+
+
+const styleController = require('./routes/styleController')
+app.use('/users/:userId/influencer/:influencerId/style', styleController)
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -36,6 +53,7 @@ mongoose.connection.on('error', (error) => {
   process.exit(-1)
 })
 
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
@@ -46,7 +64,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 
-// app.use('/users', userController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -58,13 +75,10 @@ app.use(function(req, res, next) {
 
 //Register routes and controllers
 //the combination directly below controlls refer to the index page "index aka home page"
-const indexController = require('./routes/indexController')
-app.use('/', index)
 
-// Automatically redirect to the index page
-app.get('/', (request, response) => {
-  response.redirect('/index')
-})
+
+
+
 
 
 // const userController = require('./routes/userController')
