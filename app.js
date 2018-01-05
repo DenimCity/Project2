@@ -61,6 +61,7 @@ app.use(function(req, res, next) {
 const indexController = require('./routes/indexController')
 app.use('/', index)
 
+// Automatically redirect to the index page
 app.get('/', (request, response) => {
   response.redirect('/index')
 })
@@ -75,7 +76,7 @@ app.get('/', (request, response) => {
 // const giftsController = require('./routes/giftsController')
 // app.use('/users/:userId/stores/:storeId/gifts', giftsController )
 
-// Automatically redirect to the index page
+
 
 
 
