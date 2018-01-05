@@ -1,0 +1,28 @@
+<div class="stepper">
+<H1>Welcome to the Contributers Page</H1>
+
+</div>
+
+<div class="profile-card-container">
+  <div class="user-cards">
+    {{#each users}}
+    <a href="/users/{{this._id}}" class="link user-card">
+      <div class="user-image">
+        {{#if this.photoUrl}}
+          <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
+        {{else}}
+          <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> 
+        {{/if}}
+      </div>
+      <div class="profile-name">
+        {{this.firstName}} {{this.lastName}}
+      </div>
+    </a>
+    {{/each}}
+  </div>
+
+  <div class="button primary">
+    <a href="/users/new">
+      New User
+    </a>
+  </div>

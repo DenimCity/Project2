@@ -1,36 +1,35 @@
-<div>
-  <a href="/users/index"></a>
-  {{#each user}}
+<div class="HomeBtn">
+  <a href="/">Go Home</a> /
+</div>
+
+
+
+<h1>{{user.username}}</h1>
+<h1>{{user.firstName}} {{user.lastName}}</h1>
+
+<div class="user-container">
   <div>
-    <h3>
-      {{this.firstName}} {{}}
-    </h3>
-    <div>
-      First Name: {{this.firstNname}}
+    {{#if user.photoUrl}}
+    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
+    <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
+  </div>
+  <div class="user-info">
+    <div class="button-container">
+      <div class="button primary">
+        <a href="/users/{{user._id}}/edit">Update INFO</a>
+      </div>
+      <div class="button warning">
+        <a href="/users/{{user._id}}/delete">Delete ME</a>
+      </div>
     </div>
-    <div>
-      Last Name: {{this.lastName}}
+    <div>Username:
+      <strong>{{user.username}}</strong>
     </div>
-    <div>
-      Instagram: {{this.instagramUrl}}
+    <div>Email:
+      <strong>{{user.email}}</strong>
     </div>
-    <div>
-      Twitter: {{this.twitterUrl}}
-    </div>
-
-    <div>
-      Location: {{this.location}}
-    </div>
-
-    <div>
-      Photo: {{this.photoUrl}}
-    </div>
-
-
-    <div>
-      <a href="/users/{{this._id}}" View></a>
+    <div class="visit-store">
+      <a href="/users/{{user._id}}/stores">Stores To Visit</a>
     </div>
   </div>
-  {{/each}}
-
 </div>
