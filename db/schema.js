@@ -92,15 +92,15 @@ const UserSchema = new Schema({
   },
   firstName: {
     type: String,
-    required: [true, "Must Have First Name"]
+    required: [true, 'Must Have First Name']
   },
-  lastname: {
+  lastName: {
     type: String,
-    required: [true, "Must have a Last Name"]
+    required: true,
   },
   instagramUrl: {
     type: String,
-    required: [true, 'we need you to have at least a instagram page'],
+    required: [true],
     unique: [true, 'this twitter page is already in use']
   },
   twitterUrl: {
