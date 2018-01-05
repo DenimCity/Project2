@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const User = require('/models/User')
+const User = require('./models/User')
 const Influencer = require('./models/Influencer')
 const Style = require('./models/Style')
 const mongoose = require('mongoose')
