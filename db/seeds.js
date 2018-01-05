@@ -55,7 +55,7 @@ mongoose.connect(process.env.MONGODB_URI)
     instagramUrl:'https://www.instagram.com/theonly_ea/',
     twitterUrl:'https://twitter.com/theonly_EA',
     location:'Atlanta, Georgia',
-    photoUrl: 'https://imgur.com/KzXEukR',
+    photoUrl: 'https://i.imgur.com/KzXEukR.jpg',
     influencers: [{
       name:'Rasheeda',
       instagramUrl:'https://www.instagram.com/rasheedadabosschick/?hl=en',
