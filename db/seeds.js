@@ -28,12 +28,12 @@ mongoose.connect(process.env.MONGODB_URI)
     twitterUrl:'https://twitter.com/jeanlikedenim',
     location:'Atlanta, Georgia',
     photoUrl: 'https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19436484_294868254308560_4898463097905217536_n.jpg',
-    Influencer: [{
+    influencers: [{
       name: 'John Lee',
       instagramUrl: 'https://www.instagram.com/johnjunglee/?hl=en',
       location:'Seattle',
       photourl:'https://www.instagram.com/p/BddgXhSH1mA/?taken-by=johnjunglee',
-      Style: [{
+      styles: [{
         top: 'Fear Of God',
         topInfo:'From PacSun',
         img1: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yTjpry930Aw0k8IjsMmPNRe09oGT14qACQcMOIhhJvvcWHat',
