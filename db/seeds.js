@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
   })
 
   const Jean = new User({
+    username: 'jeanlikedenim',
     firstName: 'Jean',
     lastName: 'Altidor',
     instagramUrl:'https://www.instagram.com/jeanlikedenim/',
@@ -48,18 +49,19 @@ mongoose.connect(process.env.MONGODB_URI)
 
 
   const Eman = new User({
+    username:'theonly_EA',
     firstName: 'Emanuella',
     lastName: 'Altidor',
     instagramUrl:'https://www.instagram.com/theonly_ea/',
     twitterUrl:'https://twitter.com/theonly_EA',
     location:'Atlanta, Georgia',
     photoUrl: 'https://imgur.com/KzXEukR',
-    Influencer: [{
+    influencers: [{
       name:'Rasheeda',
       instagramUrl:'https://www.instagram.com/rasheedadabosschick/?hl=en',
       location:'Atlanta',
       photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
-      Style: [{
+      styles: [{
         top:'Polo Tee',
         topInfo:'Raulph Lauren',
         img1:'https://s7.ralphlauren.com/is/image/PoloGSI/s7-1246337_lifestyle?$rl_470_pdp$',
@@ -71,8 +73,6 @@ mongoose.connect(process.env.MONGODB_URI)
         userUpload:'https://www.instagram.com/p/7aS4C1C0Zl/?taken-by=theonly_ea',
       }]
     }]
-    
-
 })
 //seed file is all just dumby date to preload you database
 //how i delete the users , and make some fake one to test that my files will save to my database
