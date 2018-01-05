@@ -9,7 +9,9 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const index = require('./routes/indexController')
-const Users = require('./routes/usersController')
+const User = require('./routes/userController')
+const Influencer = require('./routes/influencerController')
+const Style = require('./routes/styleController')
 
 const app = express()
 
@@ -44,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 app.use('/', index)
-app.use('/Users', Users)
+// app.use('/users', userController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,8 +56,20 @@ app.use(function(req, res, next) {
 })
 
 
-///Register Controllers
+///Register routes
+// const userController = require('./routes/userController')
+// app.use('/users', userController)
 
+// const storesController = require('./routes/storesController')
+// app.use('/users/:userId/stores', storesController)
+
+// const giftsController = require('./routes/giftsController')
+// app.use('/users/:userId/stores/:storeId/gifts', giftsController )
+
+// Automatically redirect to the index page
+app.get('/', (request, response) => {
+  response.redirect('/index')
+})
 
 
 

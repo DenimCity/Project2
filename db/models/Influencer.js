@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = require('../schema')
 
-const User = mongoose.model('Influencer', Schema.InfluencerSchema)
+const Influencer = mongoose.model('Influencer', Schema.InfluencerSchema)
 
 
 
