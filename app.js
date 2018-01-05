@@ -11,24 +11,24 @@ const methodOverride = require('method-override')
 
 
 const app = express()
-//  ///Automatically redirect to the index page
-//  app.get('/', (request, response) => {
-//    response.redirect('')
-//  })
+
 const indexController = require('./routes/indexController')
 app.use('/', indexController)
-
+//  ///Automatically redirect to the index page
+//  app.get('/', (request, response) => {
+//   response.redirect('/users')
+//  })
 
 
 const userController = require('./routes/userController')
 app.use('/users', userController)
 
-const influencerController = require('./routes/influencerController')
-app.use('/users/:userId/influencer', influencerController)
+// const influencerController = require('./routes/influencerController')
+// app.use('/users/:userId/influencer', influencerController)
 
 
-const styleController = require('./routes/styleController')
-app.use('/users/:userId/influencer/:influencerId/style', styleController)
+// const styleController = require('./routes/styleController')
+// app.use('/users/:userId/influencer/:influencerId/style', styleController)
 
 
 
@@ -63,39 +63,12 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
   err.status = 404
   next(err)
 })
-
-
-//Register routes and controllers
-//the combination directly below controlls refer to the index page "index aka home page"
-
-
-
-
-
-
-// const userController = require('./routes/userController')
-// app.use('/users', userController)
-
-// const storesController = require('./routes/storesController')
-// app.use('/users/:userId/stores', storesController)
-
-// const giftsController = require('./routes/giftsController')
-// app.use('/users/:userId/stores/:storeId/gifts', giftsController )
-
-
-
-
-
-
-
 
 // error handler
 app.use(function(err, req, res, next) {
