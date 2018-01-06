@@ -15,7 +15,7 @@ const app = express()
 const indexController = require('./routes/indexController')
 app.use('/', indexController)
 //  ///Automatically redirect to the index page
-//  app.get('/', (request, response) => {
+//  app.get('/', (req, res) => {
 //   response.redirect('/users')
 //  })
 
