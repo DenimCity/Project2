@@ -1,10 +1,16 @@
 body {
   padding: 50px;
   Font-Family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
   
 }
 
 a {
-  color: goldenrod;
+  color: green;
+}
+
+.user-card img {
+  height: 200px;
+  width: 200px;
+  border-radius: 49%;
+  background: white;
 }
