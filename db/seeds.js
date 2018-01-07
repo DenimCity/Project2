@@ -35,7 +35,7 @@ mongoose.connect(process.env.MONGODB_URI)
       instagram: 'HomerDrinksBeer',
       location:'Springfield',
       photoUrl:'https://i.imgur.com/G80lKgk.jpg',
-      styles: [{
+      style: [{
         top: 'Fear Of God',
         topInfo:'From PacSun',
         img1: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yTjpry930Aw0k8IjsMmPNRe09oGT14qACQcMOIhhJvvcWHat',
@@ -65,7 +65,7 @@ mongoose.connect(process.env.MONGODB_URI)
       instagram:'rasheedadabosschick',
       location:'Atlanta',
       photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
-      styles: [{
+      style: [{
         top:'Polo Tee',
         topInfo:'Raulph Lauren',
         img1:'https://s7.ralphlauren.com/is/image/PoloGSI/s7-1246337_lifestyle?$rl_470_pdp$',

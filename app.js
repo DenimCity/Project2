@@ -52,7 +52,7 @@ app.use('/users', userController)
 const influencerController = require('./routes/influencerController')
 app.use('/users/:userId/influencer', influencerController)
 
-//styles page
+//style page
 // const styleController = require('./routes/styleController')
 // app.use('/users/:userId/influencer/:influencerId/style', styleController)
 
