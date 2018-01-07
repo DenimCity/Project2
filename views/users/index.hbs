@@ -15,7 +15,10 @@
         {{/if}}
       </div>
       <div class="profile-name">
-        {{this.firstName}} {{this.lastName}}
+        This is: {{this.lastName}},{{this.firstName}}
+        <div>
+         But goes by {{this.username}} 
+       </div>
       </div>
     </a>
     {{/each}}
@@ -23,6 +26,6 @@
 
   <div class="button primary">
     <a href="/users/new">
-      New User
+      New Contributer
     </a>
   </div>

@@ -1,0 +1,56 @@
+<div class="stepper">
+  <a href="/users">Home</a> / New Contributer
+</div>
+<div class="card">
+
+  <h2>Contributor Info</h2>
+  <div>
+    <form action="/users" method="POST">
+      <div class="form-input">
+        <label for="username">Username:</label>
+        <input type="ext" name="username" required/>
+      </div>
+
+      <div class="form-input">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required/>
+      </div>
+
+      <div class="form-input">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required/>
+      </div>
+      <div class="form-input">
+        <label for="Userinstagram">Instagram name:</label>
+        <input type="text" name="Userinstagram" required/>
+      </div>
+
+      <div class="form-input">
+        <label for="twitter">Twitter name:</label>
+        <input type="text" name="twitter" />
+      </div>
+      <div class="form-input">
+        <label for="location">City:</label>
+        <input type="text" name="location" />
+      </div>
+
+      <div class="form-input">
+        <label for="photoUrl">Photo Url:</label>
+        <input type="text" name="photoUrl" />
+      </div>
+      <div class="form-input">
+        <label for="description">Description of fashion?:</label>
+        <input type="text" name="description" />
+      </div>
+      <div class="form-input">
+        <label for="motto">Whats your motto?:</label>
+        <input type="text" name="motto" />
+      </div>
+
+      <div class="button-container flex-end">
+        <input class="button primary" type="submit" value="Create User">
+        <a href="/users" class="button warning">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
