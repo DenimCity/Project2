@@ -6,35 +6,22 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
-const bodyParser = require('body-parser')
-const methodOverride = require('method-override')
+
+
 
 
 const app = express()
-
-const indexController = require('./routes/indexController')
-app.use('/', indexController)
-//  ///Automatically redirect to the index page
-//  app.get('/', (req, res) => {
-//   response.redirect('/users')
-//  })
-
-
-const userController = require('./routes/userController')
-app.use('/users', userController)
-
-// const influencerController = require('./routes/influencerController')
-// app.use('/users/:userId/influencer', influencerController)
-
-
-// const styleController = require('./routes/styleController')
-// app.use('/users/:userId/influencer/:influencerId/style', styleController)
-
-
-
 // view engine setup
-app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, 'views'))
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
 
 // Mongo connection set-up
 mongoose.Promise = global.Promise
@@ -53,15 +40,37 @@ mongoose.connection.on('error', (error) => {
   process.exit(-1)
 })
 
+///the controllers control the path and actions
+//homePAge
+const indexController = require('./routes/indexController')
+app.use('/', indexController)
+
+//users page
+const userController = require('./routes/userController')
+app.use('/users', userController)
+//influencers page
+const influencerController = require('./routes/influencerController')
+app.use('/users/:userId/influencer', influencerController)
+
+//styles page
+// const styleController = require('./routes/styleController')
+// app.use('/users/:userId/influencer/:influencerId/style', styleController)
+
+
+
+
+
+
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+
+
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(methodOverride('_method'))
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
