@@ -59,20 +59,20 @@ const InfluencerSchema = new Schema({
 
   name: {
     type: String,
-    require: [true, 'we need a name for this influencer']
+    require: [true]
   },
-  instagramUrl: {
+  instagram: {
     type: String,
-    required: [true, 'most influencers have instagrams, copy their link here']
+    required: [true]
   },
 
   location: {
     type: String,
-    require: [true, 'what city are they from or post majority of their posts']
+    require: [true]
   },
   photoUrl: {
     type: String,
-    default: 'https://i.imgur.com/Q5LuoCo.jpg'
+
   },
 
   styles: [StyleSchema]
@@ -88,7 +88,6 @@ const UserSchema = new Schema({
   username: {
     type: String,
     require: [true, 'We need that fashion handle'],
-    unique: [true, 'This username has already been created']
   },
   firstName: {
     type: String,
@@ -98,25 +97,34 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  instagramUrl: {
+  Userinstagram: {
     type: String,
     required: [true],
-    unique: [true, 'this twitter page is already in use']
+    
   },
-  twitterUrl: {
+  twitter: {
     type: String,
     required: [true, 'we have monthly shoutouts on twitter, so we need your twitter handle'],
-    unique: [true, 'this twitter page is already in use']
+    
   },
 
   location: {
     type: String,
-    require: [true, 'We want to know where are users are from']
+    
 
   },
   photoUrl: {
     type: String,
-    default: 'http://images.clipartpanda.com/silhouettes-clipart-clip_art_silhouette_of_a_cartoon_baby_sitting_down_with_his_arms_out_0515-1002-0103-4312_SMU.jpg',
+    default: '/public/images/la-la-et-thse-bill-cosby-show-wre0029867895-19690101.jpg',
+  },
+  description: {
+    type: String,
+    
+  },
+
+  motto: {
+    type: String,
+    
   },
 
   influencers: [InfluencerSchema]
