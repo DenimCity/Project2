@@ -4,8 +4,8 @@
 
 
 
-<h1>{{user.username}}</h1>
-<h1>{{user.firstName}} {{user.lastName}}</h1>
+
+<h1>Meet: {{user.firstName}} {{user.lastName}}</h1>
 
 <div class="user-container">
   <div>
@@ -15,21 +15,37 @@
   </div>
   <div class="user-info">
     <div class="button-container">
-      <div class="button primary">
-        <a href="/users/{{user._id}}/edit">Update INFO</a>
-      </div>
-      <div class="button warning">
-        <a href="/users/{{user._id}}/delete">Delete ME</a>
-      </div>
+      
     </div>
     <div>Username:
       <strong>{{user.username}}</strong>
     </div>
-    <div>Email:
-      <strong>{{user.email}}</strong>
+    <div>instagram:@
+      <strong>{{user.instagram}}</strong>
     </div>
+     <div>twitter:@
+      <strong>{{user.twitter}}</strong>
+    </div>
+     <div>Currently living in:
+      <strong>{{user.location}}</strong>
+    </div>
+     <div>What is fashion?:
+      <strong>{{user.description}}</strong>
+    </div>
+  
+     <div>Whats your motto?:
+      <strong>{{user.motto}}</strong>
+    
+
+
+    <div class="button primary">
+        <a href="/users/{{user._id}}/edit">Edit Me</a>
+      </div>
+      <div class="button warning">
+        <a href="/users/{{user._id}}/delete">Delete ME</a>
+      </div>
     <div class="visit-store">
-      <a href="/users/{{user._id}}/stores">Stores To Visit</a>
+      <a href="/users/{{user._id}}/influencer">Influenced By List</a>
     </div>
   </div>
 </div>
