@@ -75,7 +75,7 @@ const InfluencerSchema = new Schema({
 
   },
 
-  styles: [StyleSchema]
+  style: [StyleSchema]
 
 },
   {
