@@ -36,15 +36,9 @@ mongoose.connect(process.env.MONGODB_URI)
       location:'Springfield',
       photoUrl:'https://i.imgur.com/G80lKgk.jpg',
       style: [{
-        top: 'Fear Of God',
-        topInfo:'From PacSun',
-        img1: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yTjpry930Aw0k8IjsMmPNRe09oGT14qACQcMOIhhJvvcWHat',
-        bottom: 'Fear Of God',
-        bottomInfo: 'PacSun',
-        img2:'https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/cache=expiry:max/rotate=deg:exif/resize=height:880,fit:scale/output=format:jpg,quality:70/compress/6n93epxbQc6QF892j6z3',
-        shoe:'Vans',
-        img3:'https://www.instagram.com/p/Bc0OS6jnOsd/?taken-by=johnjunglee',
-        userUpload:'https://www.instagram.com/p/BcxnQHDHD0Q/?taken-by=johnjunglee',
+        img1:'https://i.imgur.com/FLlQd7J.png',
+        img2:'https://i.imgur.com/rwZx9bm.png',
+
       }]
     }]
 })
@@ -71,6 +65,29 @@ mongoose.connect(process.env.MONGODB_URI)
       }]
     }]
 })
+
+const Ozzie = new User({
+  username:'Bendlikebanan',
+  firstName: 'Ozzie',
+  lastName: 'Cunningham',
+  Userinstagram:'_bendlikebanana',
+  twitter:'_bendlikebanana',
+  location:'Fort Lauderdale',
+  photoUrl: 'https://i.imgur.com/hcw8dAW.jpg',
+  description:'Fashion is a way to talk to talk to the world as I walk by',
+  motto:'Onyly you can be you, so why not good doing it!',
+  influencers: [{
+    name:'Rasheeda',
+    instagram:'rasheedadabosschick',
+    location:'Atlanta',
+    photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
+    style: [{
+      img1:"https://i.imgur.com/NRnhMjw.jpg",
+      img2:'https://i.imgur.com/1eds4Rl.jpg'
+    }]
+  }]
+})
+
 //seed file is all just dumby date to preload you database
 //how i delete the users , and make some fake one to test that my files will save to my database
 User.remove()
