@@ -111,13 +111,13 @@ User.remove()
     return Eman.save()
     console.log('2nd seed  planted')
   })
-.then(()=> {
-  mongoose.connection.close()
-  console.log(`
-  Finished seeding database...
-  
-  Disconnected from MongoDB Connection
-`)
+  .then(() => {
+    mongoose.connection.close()
+    console.log(`
+    Finished seeding database...
+    
+    Disconnected from MongoDB
+    `)
 })
    
  
