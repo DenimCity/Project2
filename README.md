@@ -13,14 +13,16 @@ This is a app that allows a user to come to a fashion page and see fashion curat
 --
 Links to the Deployed App
 -
-View from Desktop link: /// https://sneakersproject2.herokuapp.com/users/
+ https://sneakersproject2.herokuapp.com/users/
 
 User Stories: Trello Board
+-
 link: https://trello.com/b/QpnchcJq/project-2
 
 Wirefames or Mockups
 -
-Link https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0
+https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0
+
 List of technologies, libraries, and/or frameworks used in the project:
 -
 CodePen, Node JS, Heroku Figma VSCO eidtor, Online Resources
@@ -28,7 +30,7 @@ Youtube, Google, W3schools, Stackoverflow, jQuery Docs
 
 
 Version 2: ideas
---
+-
 1. Will be able to see the photo examples of user display.
 
 2.Format the website
@@ -42,6 +44,10 @@ Version 2: ideas
 6.Adjust the display and image size of the different pages.
 
 7.Mobile friendly
+
+8. figuring out how to get my influencers photos to load
+
+
 
 
 
