@@ -1,25 +1,25 @@
 <div class="stepper">
-  <a href="/users">Home</a> /
+  <a href="/users">Home</a> /b(im from the users in dex file)
   <a href="/users/{{userId}}">Profile</a> / Influencers
 </div>
 
 <div class="store-header">
-  <h1>{{user.username}}'s Influencers</h1>
+  <h1>These are {{user.firstName}}'s Influencers</h1>
   <div class="button primary">
-    <a href="/users/{{userId}}/stores/new">Add a Influencer</a>
+    <a href="/users/{{user._id}}/influencer/new">Add a Influencer</a>
   </div>
 </div>
 
-<div class="stores">
-  {{#each influencers}}
-  <div class="store card">
-    <a class="cancel" href="/users/{{../userId}}/stores/{{this._id}}/delete">X</a>
-    <a href="/users/{{../userId}}/stores/{{this._id}}">
-      <h3>{{influencers.name}}</h3>
-    </a>
-    <p>{{this.username}}</p>
 
-    
-  </div>
+
+<div class="stores">
+  {{#each user.influencers}}
+      <div>Influencers name:{{this.name}}</div>
+      <div>Influencers instagram name:{{this.instagram}}</div> 
+      <div>Influencers City:{{this.location}}</div>
+      <div>Headshot <img src="{{this.photoUrl}}" alt="homer"></div>
+      <hr>
   {{/each}}
+
+  
 </div>
