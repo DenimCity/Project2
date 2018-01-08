@@ -1,7 +1,13 @@
 <div class="stepper">
-  <a href="/users">Home</a> /
-  <a href="/users/{{userId}}">Profile</a> / Influencers
+  <a href="/users">Hme</a> 
+<div>
+  <a href="/users/{{userId}}">Back</a> 
+  </div>
 </div>
+
+</div>
+
+<div class="wholeContainer">
 
 <div class="store-header">
   <h1>These are {{user.firstName}}'s Influencers</h1>
@@ -17,14 +23,19 @@
       <div>Name:{{this.name}}</div>
       <div>Instagram:{{this.instagram}}</div> 
       <div>City:{{this.location}}</div>
-      <div><a href="/users/{{user._id}}/influencer/{{this._id}}/style">Style</a></div>
-      <div><img src="{{this.photoUrl}}" alt="broken"></div>
+      <div><a href="/users/{{user._id}}/influencer/{{this._id}}/style">See My Styles</a></div>
+      <div><img class="ifluencer" src="{{this.photoUrl}}" alt="broken"></div>
       <hr>
   {{/each}}
 
+<div class="stepper">
+  <a href="/users">Hme</a> 
+<div>
+  <a href="/users/{{userId}}">Back</a> 
+  </div>
+</div>
 
-
-
+</div>
 
 
  
