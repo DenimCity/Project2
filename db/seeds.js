@@ -58,7 +58,7 @@ mongoose.connect(process.env.MONGODB_URI)
       name:'Rasheeda',
       instagram:'rasheedadabosschick',
       location:'Atlanta',
-      photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
+      photoURl:'https://i.imgur.com/sCuY1aV.jpg',
       style: [{
         img1:"https://i.imgur.com/NRnhMjw.jpg",
         img2:'https://i.imgur.com/1eds4Rl.jpg'
@@ -77,10 +77,10 @@ const Ozzie = new User({
   description:'Fashion is a way to talk to talk to the world as I walk by',
   motto:'Onyly you can be you, so why not good doing it!',
   influencers: [{
-    name:'Rasheeda',
-    instagram:'rasheedadabosschick',
-    location:'Atlanta',
-    photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
+    name:'Faolous',
+    instagram:'myfobolouslife',
+    location:'New York',
+    photoURl:'https://i.imgur.com/VTnn2JN.jpg',
     style: [{
       img1:"https://i.imgur.com/NRnhMjw.jpg",
       img2:'https://i.imgur.com/1eds4Rl.jpg'
