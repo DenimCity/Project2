@@ -90,29 +90,23 @@ const Ozzie = new User({
 
 //seed file is all just dumby date to preload you database
 //how i delete the users , and make some fake one to test that my files will save to my database
-User.remove()
+User.remove({})
   .then(() => {
-    return User.remove()
-    console.log('the seeds have been removed')
-  })
-  
-  .then(() => {
-    return Jean.save()
     console.log('1st seed are planted')
-    
+    return Jean.save()
   })
 
   .then(() => {
-    return Ozzie.save()
     console.log('1st seed are planted')
-    
+    return Ozzie.save()
   })
   .then(() => {
-    return Eman.save()
     console.log('2nd seed  planted')
+    return Eman.save()
   })
-  .then(() => {
+.then(() => {
     mongoose.connection.close()
+    
     console.log(`
     Finished seeding database...
     
