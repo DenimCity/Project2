@@ -78,6 +78,7 @@ mongoose.connect(process.env.MONGODB_URI)
       }]
     }]
 })
+
 //seed file is all just dumby date to preload you database
 //how i delete the users , and make some fake one to test that my files will save to my database
 User.remove()
