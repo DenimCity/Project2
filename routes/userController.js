@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 ///when the user types localhost3000/user this page loads 
 ///using this command
 router.get('/', (req, res) => {
+  console.log("style here")
   User.find({})
     .then((users) => {
       res.render('users/index', {
