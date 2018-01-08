@@ -1,0 +1,19 @@
+<div class="stepper">
+  <a href="/users">Home</a> /
+  <a href="/users/{{userId}}">Profile</a> /
+  <a href="/users/{{userId}}/influencer">influencer</a> /
+  <a href="/users/{{userId}}/influencer/{{influencer._id}}">{{influencer.name}}</a> / stylers
+</div>
+
+<div class="user-container">
+  <div>
+    {{stlye.img1}}
+  </div>
+ 
+ <div>
+    {{stlye.img2}}
+  </div>
+    
+    <a class="button warning" href="/users/{{userId}}/influencer/{{influencer._id}}/stylers/{{styler._id}}/delete">Delete</a>
+  </div>
+</div>

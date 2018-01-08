@@ -36,19 +36,12 @@ mongoose.connect(process.env.MONGODB_URI)
       location:'Springfield',
       photoUrl:'https://i.imgur.com/G80lKgk.jpg',
       style: [{
-        top: 'Fear Of God',
-        topInfo:'From PacSun',
-        img1: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yTjpry930Aw0k8IjsMmPNRe09oGT14qACQcMOIhhJvvcWHat',
-        bottom: 'Fear Of God',
-        bottomInfo: 'PacSun',
-        img2:'https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/cache=expiry:max/rotate=deg:exif/resize=height:880,fit:scale/output=format:jpg,quality:70/compress/6n93epxbQc6QF892j6z3',
-        shoe:'Vans',
-        img3:'https://www.instagram.com/p/Bc0OS6jnOsd/?taken-by=johnjunglee',
-        userUpload:'https://www.instagram.com/p/BcxnQHDHD0Q/?taken-by=johnjunglee',
+        img1: 'https://i.imgur.com/Q5LuoCo.jpg',
+        img2:'https://i.imgur.com/FLlQd7J.png',
+  
       }]
     }]
 })
-
 
   const Eman = new User({
     username:'theonly_EA',
@@ -57,26 +50,41 @@ mongoose.connect(process.env.MONGODB_URI)
     Userinstagram:'theonly_ea',
     twitter:'theonly_EA',
     location:'Decatur, Georgia',
-    photoUrl: 'https://i.imgur.com/KzXEukR.jpg',
+    photoUrl: '/public/images/la-la-et-the-bill-cosby-show-wre0029867895-19690101.jpg',
     description:'Fashion is a way to talk to talk to the world as I walk by',
     motto:'Onyly you can be you, so why not good doing it!',
     influencers: [{
       name:'Rasheeda',
       instagram:'rasheedadabosschick',
       location:'Atlanta',
-      photoURl:'https://www.instagram.com/p/BZrg7objGwq/?taken-by=rasheedadabosschick',
+      photoURl:'https://i.imgur.com/PmOMUd3.png',
       style: [{
-        top:'Polo Tee',
-        topInfo:'Raulph Lauren',
-        img1:'https://s7.ralphlauren.com/is/image/PoloGSI/s7-1246337_lifestyle?$rl_470_pdp$',
-        bottom:'Mid Thighs',
-        bottomInfo:'Banana Republic',
-        img2:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrn-9y1B3TtCQCvgF1ZcbDFirOcr87N1vaVMrgtVUbcTGra9syQ',
-        shoe:'Wedges',
-        img3:'https://gloimg.trendsgal.com/TR/201308/source-img/1376075226875-P-1008521.jpg',
-        userUpload:'https://www.instagram.com/p/7aS4C1C0Zl/?taken-by=theonly_ea',
+        img1:'https://i.imgur.com/pV1R2Xv.jpg',
+        img1:'https://i.imgur.com/ExTogSi.jpg',
       }]
     }]
+})
+
+const Ozzie = new User({
+  username:'bendlikebanana',
+  firstName: 'Ozzie',
+  lastName: 'Cunningham',
+  Userinstagram:'_bendlikebanana',
+  twitter:'bendlikebanana',
+  location:'Fort Lauderdale, Florida',
+  photoUrl: '/public/images/la-la-et-the-bill-cosby-show-wre0029867895-19690101.jpg',
+  description:'Walk with as if its your body guard ',
+  motto:'Fly is the only thing that I need to be',
+  influencers: [{
+    name:'Fabulous',
+    instagram:'myfabolouslife',
+    location:'New York',
+    photoURl:'https://i.imgur.com/VTnn2JN.jpg',
+    style: [{
+      img1:'https://i.imgur.com/1eds4Rl.jpg',
+      img1:'https://i.imgur.com/NRnhMjw.jpg',
+    }]
+  }]
 })
 
 //seed file is all just dumby date to preload you database
@@ -86,6 +94,9 @@ User.remove()
     return User.remove()
     console.log('the seeds have been removed')
   })
+
+  
+
   .then(() => {
     return Jean.save()
     console.log('1st seed are planted')
@@ -94,6 +105,11 @@ User.remove()
   .then(() => {
     return Eman.save()
     console.log('2nd seed  planted')
+    .then(() => {
+      return Ozzie.save()
+      console.log('3rd seed are planted')
+    })
+
     mongoose.connection.close()
     console.log(`
     Finished seeding database...

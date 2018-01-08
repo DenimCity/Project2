@@ -1,56 +1,94 @@
+<body>
+  
+
+<div class="bg"></div>
+
+
 <div class="stepper">
-  <a href="/users">Home</a> / New Contributer
+  <a href="/users">Back</a> 
 </div>
 <div class="card">
 
-  <h2>Contributor Info</h2>
-  <div>
+  <h2>New Contributor Page</h2>
+  <p></p>
+  <div class="container">
     <form action="/users" method="POST">
-      <div class="form-input">
-        <label for="username">Username:</label>
-        <input type="ext" name="username" required/>
+    <div class="row">
+      <div class="col-25">
+        <label for="username">User Name</label>
       </div>
-
-      <div class="form-input">
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" required/>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="User Name..">
+         <div class="row">
+      <div class="col-25">
+        <label for="firstName">First Name</label>
       </div>
-
-      <div class="form-input">
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" required/>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
       </div>
-      <div class="form-input">
-        <label for="Userinstagram">Instagram name:</label>
-        <input type="text" name="Userinstagram" required/>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
       </div>
-
-      <div class="form-input">
-        <label for="twitter">Twitter name:</label>
-        <input type="text" name="twitter" />
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
       </div>
-      <div class="form-input">
-        <label for="location">City:</label>
-        <input type="text" name="location" />
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="insta">Instagram Name</label>
       </div>
-
-      <div class="form-input">
-        <label for="photoUrl">Photo Url:</label>
-        <input type="text" name="photoUrl" />
+      <div class="col-75">
+        <input type="text" id="lname" name="instagram" placeholder="@ your name..">
       </div>
-      <div class="form-input">
-        <label for="description">Description of fashion?:</label>
-        <input type="text" name="description" />
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="location">Twitter Name</label>
       </div>
-      <div class="form-input">
-        <label for="motto">Whats your motto?:</label>
-        <input type="text" name="motto" />
+      <div class="col-75">
+        <input type="text" id="lname" name="twitter" placeholder="@ twitter name..">
       </div>
-
-      <div class="button-container flex-end">
-        <input class="button primary" type="submit" value="Create User">
-        <a href="/users" class="button warning">Cancel</a>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="location">City</label>
       </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="location" placeholder="Current City..">
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="description">What is fashion?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="description" placeholder="Write here.." style="height:100px"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="motto">Whats your fashion motto? </label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="motto" placeholder="Write here.." style="height:100px"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+      <input type="cancel" name="cancel" value="Cancel" />
+      <a href="/users" class="button warning">Cancel</a>
+    </div>
     </form>
   </div>
 </div>
+
+</body>
