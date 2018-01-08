@@ -1,5 +1,5 @@
 <div class="stepper">
-  <a href="/users">Home</a> /b(im from the users in dex file)
+  <a href="/users">Home</a> /
   <a href="/users/{{userId}}">Profile</a> / Influencers
 </div>
 
@@ -14,12 +14,33 @@
 
 <div class="stores">
   {{#each user.influencers}}
-      <div>Influencers name:{{this.name}}</div>
-      <div>Influencers instagram name:{{this.instagram}}</div> 
-      <div>Influencers City:{{this.location}}</div>
-      <div>Headshot <img src="{{this.photoUrl}}" alt="homer"></div>
+      <div>Name:{{this.name}}</div>
+      <div>Instagram:{{this.instagram}}</div> 
+      <div>City:{{this.location}}</div>
+      <div><a href="/users/{{user._id}}/influencer/{{this._id}}/style">Style</a></div>
+      <div><img src="{{this.photoUrl}}" alt="broken"></div>
       <hr>
   {{/each}}
+
+
+
+
+
+
+ 
+ <div>
+   {{#each user.influencer}}
+        {{#each this.style}}
+          {{this.img1}}
+          {{this.img2}}
+        {{/each}}
+     <div>
+       <a href="/users/{{../userId}}/influencer/{{../influencerId}}/style/{{this._id}}">
+         banana
+       </a>
+     </div>
+   {{/each}}
+ </div>
 
   
 </div>

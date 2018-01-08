@@ -7,45 +7,17 @@ mongoose.Promise = global.Promise;
 
 
 const StyleSchema = new Schema({
-  top: {
-    type: String,
-    require: [true, 'What brand of string?']
-  },
-  topInfo: {
-    type: String,
-    required: [true, 'where did you buy the shirt?']
-  },
+  
   img1: {
     type: String,
-    required: [true, 'show us what it looks like, upload a picture link']
+    
   },
-  bottom: {
-    type: String,
-    required: [true, 'What brand are the shorts?']
-  },
-
-  bottomInfo: {
-    type: String,
-    require: [true, 'where did you buy the shirt?']
-  },
+  
   img2: {
     type: String,
-    required: [true, 'copy the link of the image here']
-  },
-  shoe: {
-    type: String,
-    required: [true, 'whats the brand of the shoe?']
+  
   },
 
-  img3: {
-    type: String,
-    required: [true, 'upload a picture of the shoe']
-  },
-
-  userUpload: {
-    type: String,
-    required: [true]
-  }
 }, 
 
 {
@@ -87,24 +59,24 @@ const InfluencerSchema = new Schema({
 const UserSchema = new Schema({
   username: {
     type: String,
-    require: [true, 'We need that fashion handle'],
+    
   },
   firstName: {
     type: String,
-    required: [true, 'Must Have First Name']
+   
   },
   lastName: {
     type: String,
-    required: true,
+    
   },
   Userinstagram: {
     type: String,
-    required: [true],
+    
     
   },
   twitter: {
     type: String,
-    required: [true, 'we have monthly shoutouts on twitter, so we need your twitter handle'],
+    
     
   },
 
@@ -115,7 +87,7 @@ const UserSchema = new Schema({
   },
   photoUrl: {
     type: String,
-    default: '/public/images/la-la-et-thse-bill-cosby-show-wre0029867895-19690101.jpg',
+    default: 'http://www.clipartlord.com/wp-content/uploads/2014/04/egg4.png',
   },
   description: {
     type: String,

@@ -1,11 +1,16 @@
+<body>
+  
+
 <div class="stepper">
 <H1>Welcome to the Contributers Page</H1>
 
 </div>
 
-<div class="profile-card-container">
+<div class="card">
+  <div class="profile-card-container">
   <div class="user-cards">
     {{#each users}}
+    <h2 style="text-align:center">{{this.username}}'s Profile</h2>
     <a href="/users/{{this._id}}" class="link user-card">
       <div class="user-image">
         {{#if this.photoUrl}}
@@ -16,12 +21,14 @@
       </div>
       <div class="profile-name">
         This is: {{this.lastName}},{{this.firstName}}
-        <div>
-         But goes by {{this.username}} 
+       <div class="contact">
+         <p><button>View Pofile</button></p>
        </div>
       </div>
     </a>
+    <hr>
     {{/each}}
+    </div>
   </div>
 
   <div class="button primary">
@@ -29,3 +36,4 @@
       New Contributer
     </a>
   </div>
+</body>
