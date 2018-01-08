@@ -31,16 +31,16 @@ const InfluencerSchema = new Schema({
 
   name: {
     type: String,
-    require: [true]
+   
   },
   instagram: {
     type: String,
-    required: [true]
+   
   },
 
   location: {
     type: String,
-    require: [true]
+    
   },
   photoUrl: {
     type: String,
