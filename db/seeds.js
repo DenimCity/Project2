@@ -110,13 +110,17 @@ User.remove()
   .then(() => {
     return Eman.save()
     console.log('2nd seed  planted')
-    mongoose.connection.close()
-    console.log(`
-    Finished seeding database...
-    
-    Disconnected from MongoDB Connection
-  `)
   })
+.then(()=> {
+  mongoose.connection.close()
+  console.log(`
+  Finished seeding database...
+  
+  Disconnected from MongoDB Connection
+`)
+})
+   
+ 
   .catch(err => {
     console.log('!!!!! Houston, we have a problem, ERROR SAVING SEEDED DATA !!!!!')
     console.log(err)
