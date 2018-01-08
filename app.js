@@ -39,9 +39,7 @@ mongoose.connection.on('error', (error) => {
   `)
   process.exit(-1)
 })
-app.get('/', (request, response) => {
-  response.redirect('/users')
-})
+
 
 ///the controllers control the path and actions
 //homePAge
@@ -52,7 +50,7 @@ app.use('/', indexController)
 const userController = require('./routes/userController')
 app.use('/users', userController)
 //influencers page
-const influencerController = require('./routes/influencerController')
+const influencerController = require('./routes/influencerController.js')
 app.use('/users/:userId/influencer', influencerController)
 
 //style page
