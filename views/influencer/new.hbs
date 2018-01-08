@@ -1,0 +1,39 @@
+<div class="stepper">
+  <a href="/users">Home</a> /
+  <a href="/users/{{userId}}">Profile</a> /
+  <a href="/users/{{userId}}/influencer">Influencers</a> / New Influencer
+</div>
+
+<div class="card">
+
+  <h2>Add A New Influencer:</h2>
+  <div>
+    
+    <form action="/users/{{userId}}/influencer" method="POST">
+      <div class="form-input">
+        <label for="name">Influencer Name:</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-input">
+        <label for="instragram">Instagram:</label>
+        <input type="text" name="instagram">
+      </div>
+
+      <div class="form-input">
+        <label for="location">Location:</label>
+        <input type="text" name="location">
+      </div>
+
+      <div class="form-input">
+        <label for="photoUrl">PhotoUrl:</label>
+        <input type="text" name="photoUrl">
+      </div>
+
+      <div class="button-container flex-end">
+        <input class="button primary" type="submit" value="Create Influencer">
+        <a href="/users/{{userId}}" class="button warning">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
