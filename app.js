@@ -39,7 +39,10 @@ mongoose.connection.on('error', (error) => {
   `)
   process.exit(-1)
 })
-
+// Automatically redirect to the Users page on load
+app.get('/', (request, response) => {
+  response.redirect('/users')
+})
 
 ///the controllers control the path and actions
 //homePAge
@@ -53,14 +56,11 @@ app.use('/users', userController)
 const influencerController = require('./routes/influencerController.js')
 app.use('/users/:userId/influencer', influencerController)
 
-//style page
-// const styleController = require('./routes/styleController')
-// app.use('/users/:userId/influencer/:influencerId/style', styleController)
+// style page
+const styleController = require('./routes/styleController')
+app.use('/users/:userId/influencer/:influencerId/style', styleController)
 
-// Automatically redirect to the Users page on load
-app.get('/', (request, response) => {
-  response.redirect('/users')
-})
+
 
 
 

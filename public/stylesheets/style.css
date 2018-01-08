@@ -1,19 +1,4 @@
-/* body {
-  padding: 50px;
-  Font-Family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
-}
 
-a {
-  color: green;
-}
-
-.user-card img {
-  height: 200px;
-  width: 200px;
-  border-radius: 49%;
-  background: white;
-} */ 
 /* the navigation bar */
 ul {
   list-style-type: none;
@@ -62,8 +47,6 @@ transform: translate(-50%, -50%);
 color: black;
 opacity:1;
 }
-
-
 
 
 /* profiler card */

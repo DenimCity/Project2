@@ -91,22 +91,22 @@ router.put('/:influencerId', (req, res) => {
 
 
 
-// router.get('/:influencerId/delete', (req, res) => {
-//   const userId = req.params.userId
-//   const influencerId = req.params.influencerId
+router.get('/:influencerId/delete', (req, res) => {
+  const userId = req.params.userId
+  const influencerId = req.params.influencerId
 
-//   User.findById(userId)
-//     .then((user) => {
-//       user.influencers.id(influencerId).remove()
-//       return user.save()
-//     })
-//     .then(() => {
-//       res.redirect(`/users/${userId}/influencer/`)
-//     })
-//     .catch((error) => {
-//       console.log(error)
-//     })
-// })
+  User.findById(userId)
+    .then((user) => {
+      user.influencers.id(influencerId).remove()
+      return user.save()
+    })
+    .then(() => {
+      res.redirect(`/users/${userId}/influencer/`)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
 
 
