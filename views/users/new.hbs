@@ -1,96 +1,63 @@
 <body>
-  
 
-<div class="bg"></div>
-
-
-
+</div>
 <div class="card">
 
-  <h2>New Contributor Page</h2>
-  <p></p>
-  <div class="container">
+  <h2>User Info</h2>
+  <div>
     <form action="/users" method="POST">
-    <div class="row">
-      <div class="col-25">
-        <label for="username">User Name</label>
+      <div class="form-input">
+        <label for="username">Username</label>
+        <input type="text" name="username" required/>
       </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="User Name..">
-         <div class="row">
-      <div class="col-25">
-        <label for="firstName">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="insta">Instagram Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="instagram" placeholder="@ your name..">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="location">Twitter Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="twitter" placeholder="@ twitter name..">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="location">City</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="location" placeholder="Current City..">
-      </div>
-    </div>
-    
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="description">What is fashion?</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="description" placeholder="Write here.." style="height:100px"></textarea>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="motto">Whats your fashion motto? </label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="motto" placeholder="Write here.." style="height:100px"></textarea>
-      </div>
-    </div>
-    
-    <div class="row">
-      <input type="submit" value="Submit">
-      <input type="cancel" name="cancel" value="Cancel" />
-      <a href="/users" class="button warning">Cancel</a>
 
-      <div class="stepper">
-  <a href="/users">Back</a> 
-</div>
-    </div>
+      <div class="form-input">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="Enter here.." />
+      </div>
+
+       <div class="form-input">
+        <label for="lastName">Last Name</label >
+        <input type="text" name="lastName" placeholder="Enter here.." />
+      </div>
+
+       <div class="form-input">
+        <label for="Userinstagram">Instagram name</label>
+        <input type="text" name="Userinstagram" placeholder="Enter here.." />
+      </div>
+
+       <div class="form-input">
+        <label for="twitter">Twiiter Name?</label>
+        <input type="text" name="twitter" placeholder="Enter here.." />
+      </div>
+
+       <div class="form-input">
+        <label for="location">City</label>
+        <input type="text" name="location" placeholder="Enter here.." />
+      </div>
+
+      <div class="form-input">
+        <label for="photoUrl">Photo</label>
+        <input type="text" name="photoUrl" placeholder="copy a jpg link here"required/>
+      </div>
+
+      <div class="form-input">
+        <label for="description">What is fashion?</label>
+        <input type="text" name="description"  placeholder="Enter here.."required/>
+      </div>
+
+      <div class="form-input">
+        <label for="motto">Whats you fashion motto?</label>
+        <input type="text" name="motto"  placeholder="Enter here.."required/>
+      </div>
+
+      <div class="button-container flex-end">
+        <input class="button primary" type="submit" value="Create User">
+        <a href="/users" class="button warning">Cancel</a>
+      </div>
     </form>
   </div>
 </div>
+
 
 </body>
