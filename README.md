@@ -74,5 +74,7 @@ Lesson Learned
 
 2.  How to breakdown and read error stacks.
 
+3. Creating branches and merging to master.
+
 
 
