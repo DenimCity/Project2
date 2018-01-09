@@ -36,8 +36,11 @@ Mockup
 
 * CodePen
 * Node JS 
-* Heroku 
+* Cloud Env: Heroku 
 * Figma 
+* CSS
+* MongoDB & Mongoose
+* MongoDB Compass
 
  
 Online Resources
