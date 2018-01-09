@@ -24,12 +24,12 @@ Wirefames/Mock Up Click [here]
 Photos
 -
 WEBSITE APP
-![WEBSITE] (https://i.imgur.com/N1LCfZj.png)
+![WEBSITE] (https://i.imgur.com/N1LCfZj.jpg)
 
 ERD
-![ERD](https://i.imgur.com/dmmNrjD.png)
+![ERD](https://i.imgur.com/dmmNrjD.jpg)
 Mockup
-![MOCKUP] (https://i.imgur.com/qrwRUnp.png)
+![MOCKUP] (https://i.imgur.com/qrwRUnp.jpg)
 -
 #Technologies used:
 
