@@ -1,53 +1,78 @@
-# Project2:
+##Denim Corner
 
-Denim Corner
--
+#Project 2
+
 created by Jean Altidor
 
-GWI 13' contact: jeanwaltidor@gmail.com
-
-#Project description: Fashion App
+###GWI 13' contact: jeanwaltidor@gmail.com
+-
+###Description: Fashion App
 This is a app that allows a user to come to a fashion page and see fashion curators. THe user will be able to read the details on the user, visit their social media handles, and see how they look. THe user will aslo be able to click and a see examples of how that curator wears articles of clothing. 
 
 
 --
-Links to the Deployed App
+Links 
 -
- https://sneakersproject2.herokuapp.com/users/
+Deployed App: Click [here] (https://sneakersproject2.herokuapp.com/users/)
 
-User Stories: Trello Board
+User Stories: Click [here](https://trello.com/b/QpnchcJq/project-2)
+
+Wirefames/Mock Up Click [here]
+(https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0)
+
+
+Photos
 -
-link: https://trello.com/b/QpnchcJq/project-2
+WEBSITE APP
+![] (https://i.imgur.com/N1LCfZj.png)
 
-Wirefames or Mockups
+ERD
+![](https://i.imgur.com/dmmNrjD.png)
+Mockup
+![] (https://i.imgur.com/qrwRUnp.png)
 -
-https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0
+#Technologies used:
 
-List of technologies, libraries, and/or frameworks used in the project:
+
+* CodePen
+* Node JS 
+* Heroku 
+* Figma 
+
+ 
+Online Resources
 -
-CodePen, Node JS, Heroku Figma VSCO eidtor, Online Resources
-Youtube, Google, W3schools, Stackoverflow, jQuery Docs
+* Youtube
+*  Google
+*  W3schools
+*  Stackoverflow 
 
 
-Version 2: ideas
+
+Version 2: 
 -
-1. Will be able to see the photo examples of user display.
 
-2.Format the website
+1. Reformatting website display.
 
-3.Aave the users appear in multiple columns
+2. Add removing dead links and adding functionality.
 
-4.Add a join us forum, to apply to work at this company.
+3. Add social media links at the bottom of  the page.
 
-5.Add social media links at the bottom of  the page.
+4. Adjust the display and image size of the different pages.
 
-6.Adjust the display and image size of the different pages.
+5. Mobile friendly.
 
-7.Mobile friendly
-
-8. figuring out how to get my influencers photos to load
+6. Allowing influencers the option to upload photos and display appropiately.
+7. Add a upload button
 
 
+
+Lesson Learned
+-
+
+1. That this is not a sprint its a marathon.
+
+2.  How to breakdown and read error stacks.
 
 
 
