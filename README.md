@@ -1,37 +1,33 @@
-##Denim Corner
+## Denim Corner
 
-#Project 2
+# Project 2
 
 created by Jean Altidor
 
-###GWI 13' contact: jeanwaltidor@gmail.com
+### GWI 13' contact: jeanwaltidor@gmail.com
 -
-###Description: Fashion App
+### Description: Fashion App
 This is a app that allows a user to come to a fashion page and see fashion curators. THe user will be able to read the details on the user, visit their social media handles, and see how they look. THe user will aslo be able to click and a see examples of how that curator wears articles of clothing. 
 
 
 --
 Links 
 -
-Deployed App: Click [here] (https://sneakersproject2.herokuapp.com/users/)
+Deployed App: Click [here](https://sneakersproject2.herokuapp.com/users/)
 
 User Stories: Click [here](https://trello.com/b/QpnchcJq/project-2)
 
-Wirefames/Mock Up Click [here]
-(https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0)
+Wirefames/Mock Up Click [here](https://www.figma.com/file/RSmnUoWVBymxQ9hDuvzSbK6Q/Project-2?node-id=7%3A0)
 
 
-Photos
+Photos:
 -
-WEBSITE APP
-![WEBSITE] (https://i.imgur.com/N1LCfZj.jpg)
-
 ERD
 ![ERD](https://i.imgur.com/dmmNrjD.jpg)
 Mockup
-![MOCKUP] (https://i.imgur.com/qrwRUnp.jpg)
+![MOCKUP](https://i.imgur.com/qrwRUnp.jpg)
 -
-#Technologies used:
+# Technologies used:
 
 
 * CodePen
