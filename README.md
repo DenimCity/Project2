@@ -1,16 +1,16 @@
 ## Denim Corner
 
-# Project 2
+### Project 2
 
 created by Jean Altidor
 
-### GWI 13' contact: jeanwaltidor@gmail.com
--
+# GWI 13' contact: jeanwaltidor@gmail.com
+
+
 ### Description: Fashion App
+-
 This is a app that allows a user to come to a fashion page and see fashion curators. THe user will be able to read the details on the user, visit their social media handles, and see how they look. THe user will aslo be able to click and a see examples of how that curator wears articles of clothing. 
 
-
---
 Links 
 -
 Deployed App: Click [here](https://sneakersproject2.herokuapp.com/users/)
