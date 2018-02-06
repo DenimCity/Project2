@@ -2,7 +2,7 @@
 
 
   <div class="stepper">
-    <H1>Welcome to the Contributers Page</H1>
+    <H1>The Contributers</H1>
     <div class="button primary">
       <a href="/users/new">
         New Contributer
@@ -16,7 +16,7 @@
       <div class="user-cards">
         {{#each users}}
         <a href="/users/{{this._id}}" class="link user-card">
-          <h2 style="text-align:center">{{this.username}}'s Profile</h2>
+          <h2 style="text-align:center">{{this.username}}</h2>
           <div class="user-image">
             {{#if this.photoUrl}}
             <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> {{else}}
