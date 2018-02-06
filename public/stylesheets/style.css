@@ -35,6 +35,10 @@ body, html {
   margin: 0;
   background-color:rgb(220, 214, 205);
 }
+h1{
+  font-size: 5rem;
+    text-align: center;
+}
 
 .hero-image {
 background-image: url("https://i.imgur.com/CBWEmLR.jpg");
@@ -60,8 +64,8 @@ opacity:1;
 
 /* profiler card */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  box-shadow: 6px 20px 20px 3px rgba(0, 0, 0, 0.2);
+  max-width: 84vw;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -86,7 +90,7 @@ opacity:1;
   background-color: white;
   width: 250px;
   min-width: 200px;
-  height: 320px;
+  height: 349px;
   font-weight: bold;
   color: black;
   text-align: center;
@@ -126,4 +130,9 @@ opacity:1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.wrapper{
+  display:grid;
+  grid-template-columns: 90% auto;
 }
