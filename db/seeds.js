@@ -21,9 +21,9 @@ mongoose.connect(process.env.MONGODB_URI)
   })
 
   const Jean = new User({
-    username: 'jeanlikedenim',
-    firstName: 'Jean',
-    lastName: 'Altidor',
+    username: 'Tim2Cunning',
+    firstName: 'Timothy',
+    lastName: 'Livingston',
     Userinstagram:'jeanlikedenim',
     twitter:'jeanlikedenim',
     location:'Atlanta, Georgia',
@@ -45,9 +45,9 @@ mongoose.connect(process.env.MONGODB_URI)
 
 
   const Eman = new User({
-    username:'theonly_EA',
-    firstName: 'Emanuella',
-    lastName: 'Altidor',
+    username:'theOnly_Tiff',
+    firstName: 'Tiffany',
+    lastName: 'Williams',
     Userinstagram:'theonly_ea',
     twitter:'theonly_EA',
     location:'Decatur, Georgia',
@@ -67,9 +67,9 @@ mongoose.connect(process.env.MONGODB_URI)
 })
 
 const Ozzie = new User({
-  username:'Bendlikebanan',
-  firstName: 'Ozzie',
-  lastName: 'Cunningham',
+  username:'CapitalGB',
+  firstName: 'George',
+  lastName: 'Brown',
   Userinstagram:'_bendlikebanana',
   twitter:'_bendlikebanana',
   location:'Fort Lauderdale',
