@@ -1,39 +1,39 @@
 <body class="indexPagePic">
-  
 
-<div class="stepper">
-<H1>Welcome to the Contributers Page</H1>
 
-</div>
+  <div class="stepper">
+    <H1>Welcome to the Contributers Page</H1>
 
-<div class="card">
-  <div class="profile-card-container">
-  <div class="user-cards">
-    {{#each users}}
-    <h2 style="text-align:center">{{this.username}}'s Profile</h2>
-    <a href="/users/{{this._id}}" class="link user-card">
-      <div class="user-image">
-        {{#if this.photoUrl}}
-          <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> 
-        {{else}}
-          <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> 
-        {{/if}}
+  </div>
+<div class="wrapper">
+  <div class="card">
+    <div class="profile-card-container">
+      <div class="user-cards">
+        {{#each users}}
+        <a href="/users/{{this._id}}" class="link user-card">
+          <h2 style="text-align:center">{{this.username}}'s Profile</h2>
+          <div class="user-image">
+            {{#if this.photoUrl}}
+            <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> {{else}}
+            <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
+          </div>
+          <div class="profile-name">
+            {{this.firstName}} {{this.lastName}}
+            <div class="contact">
+              <p>
+                <button>View Pofile</button>
+              </p>
+            </div>
+          </div>
+        </a>
+        <hr> {{/each}}
       </div>
-      <div class="profile-name">
-        This is:{{this.firstName}}{{this.lastName}},
-       <div class="contact">
-         <p><button>View Pofile</button></p>
-       </div>
-      </div>
-    </a>
-    <hr>
-    {{/each}}
     </div>
-  </div>
 
-  <div class="button primary">
-    <a href="/users/new">
-      New Contributer
-    </a>
-  </div>
+    <div class="button primary">
+      <a href="/users/new">
+        New Contributer
+      </a>
+    </div>
+    </div>
 </body>
