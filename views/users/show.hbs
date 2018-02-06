@@ -1,54 +1,45 @@
 <body>
-  
 
+  <h1>Meet: {{user.firstName}} {{user.lastName}}</h1>
 
-
-
-<h1>Meet: {{user.firstName}} {{user.lastName}}</h1>
-
-<div class="user-container">
-  <div>
-    {{#if user.photoUrl}}
-    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
-    <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
-  </div>
-  <div class="user-info">
-    <div class="button-container">
-      
-    
-    <div>Username:
-      <strong>{{user.username}}</strong>
+  <div class="user-container">
+    <div>
+      {{#if user.photoUrl}}
+      <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
+      <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
     </div>
-    <div>instagram:
-      <strong>{{user.Userinstagram}}</strong>
-    </div>
-     <div>twitter:
-      <strong>{{user.twitter}}</strong>
-    </div>
-     <div>Currently living in:
-      <strong>{{user.location}}</strong>
-    </div>
-     <div>What is fashion?:
-      <strong>{{user.description}}</strong>
-    </div>
-  
-     <div>Whats your motto?:
-      <strong>{{user.motto}}</strong>
-    </div>
-
-    <div class="button primary">
-        <a href="/users/{{user._id}}/edit">Edit Me</a>
+    <div class="user-info">
+      <div class="button-container">
+        <div>Username:
+          <strong>{{user.username}}</strong>
+        </div>
+        <div>instagram:
+          <strong>{{user.Userinstagram}}</strong>
+        </div>
+        <div>twitter:
+          <strong>{{user.twitter}}</strong>
+        </div>
+        <div>Currently living in:
+          <strong>{{user.location}}</strong>
+        </div>
+        <div>What is fashion?:
+          <strong>{{user.description}}</strong>
+        </div>
+        <div>Whats your motto?:
+          <strong>{{user.motto}}</strong>
+        </div>
+        <div class="button primary">
+          <button>
+            <a href="/users/{{user._id}}/edit">Edit Me</a>
+          </button>
+        </div>
+        <div class="button warning">
+          <a href="/users/{{user._id}}/delete">Delete ME</a>
+        </div>
+        <div class="visit-store">
+          <a href="/users/{{user._id}}/influencer">Influenced By List</a>
+        </div>
       </div>
-      <div class="button warning">
-        <a href="/users/{{user._id}}/delete">Delete ME</a>
-      </div>
-    <div class="visit-store">
-      <a href="/users/{{user._id}}/influencer">Influenced By List</a>
-    </div>
-    <div class="style">
-      <a href="/users/{{../userId}}/influencer/{{../influencerId}}/stle/{{this._id}}">
     </div>
   </div>
-</div>
-
 </body>
