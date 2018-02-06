@@ -1,17 +1,18 @@
-
-
-
 img {
   max-height: 600px;
-    max-width: 800px;
+  max-width: 800px;
 }
+
 /* the navigation bar */
+
 ul {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  justify-content: center;
 }
 
 li {
@@ -29,48 +30,51 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
 /* for the hero image background  */
-body, html {
+
+body,
+html {
   height: 100%;
   margin: 0;
-  background-color:rgb(220, 214, 205);
+  background-color: rgba(189, 189, 188, 0.02);
 }
-h1{
+
+h1 {
   font-size: 5rem;
-    text-align: center;
+  text-align: center;
 }
 
 .hero-image {
-background-image: url("https://i.imgur.com/CBWEmLR.jpg");
-height: 30%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-opacity: .5;
-
+  background-image: url("https://i.imgur.com/CBWEmLR.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: .5;
+  box-shadow: 16px 3px 8px 3px;
 }
 
 .hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: black;
-opacity:1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  opacity: 1;
 }
 
-
 /* profiler card */
+
 .card {
   box-shadow: 6px 20px 20px 3px rgba(0, 0, 0, 0.2);
-  max-width: 84vw;
+  width: 100vw;
   margin: auto;
   text-align: center;
   font-family: arial;
-  display:flex;
-  
+  display: flex;
 }
 
 .profile-card-container {
@@ -109,11 +113,8 @@ opacity:1;
 .user-card img {
   height: 200px;
   width: 200px;
-  /* border-radius: 49%; */
   background: white;
-  
 }
-
 
 .user-container {
   display: flex;
@@ -132,7 +133,20 @@ opacity:1;
   justify-content: space-around;
 }
 
-.wrapper{
-  display:grid;
+.wrapper {
+  display: grid;
   grid-template-columns: 90% auto;
+}
+
+.button.primary {
+  justify-content: center;
+  display: flex;
+}
+
+@media screen and (max-width:700px) {
+  ul {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+  }
 }
