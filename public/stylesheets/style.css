@@ -72,9 +72,9 @@ h1 {
   box-shadow: 6px 20px 20px 3px rgba(0, 0, 0, 0.2);
   width: 100vw;
   margin: auto;
-  text-align: center;
   font-family: arial;
   display: flex;
+  padding: 60px;
 }
 
 .profile-card-container {
@@ -138,13 +138,34 @@ h1 {
   grid-template-columns: 90% auto;
 }
 
-.button.primary {
-  justify-content: center;
-  display: flex;
+input.button.primary {
+  background-color: green;
+  width: 14rem;
+}
+
+button.button.warning {
+  width: 14rem;
+  background-color: red;
+}
+
+input[type="textarea"] {
+  height: 7rem;
+  width: 39rem;
+  text-align: -webkit-left;
+  border: solid 1px;
+  box-shadow: 9px 5px 3px 2px;
+  text-align: center;
+}
+
+input[type="text"] {
+  box-shadow: 14px 6px 7px 1px;
+  height: 4rem;
+  width: 31rem;
+  text-align: center;
 }
 
 @media screen and (max-width:700px) {
   .nav-link {
-    color:red;
+    color: red;
   }
 }
