@@ -1,6 +1,6 @@
 img {
   max-height: 600px;
-  max-width: 800px;
+  max-width: 400px;
 }
 
 /* the navigation bar */
@@ -130,12 +130,31 @@ h1 {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  font-size: 2rem;
+  justify-content: center;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 90% auto;
+}
+.influencerWrapper {
+  display: flex;
+  font-size: 4rem;
+}
+
+.NewButton{
+  background-color: goldenrod;
+    width: 16rem;
+    font-size: 3rem;
+    border: 1px solid;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 13px 4px 12px 3px;
+}
+
+.NewButton:hover{
+  background-color: green;
 }
 
 input.button.primary {
@@ -143,10 +162,23 @@ input.button.primary {
   width: 14rem;
 }
 
-button.button.warning {
+
+button.buttonwarning {
+  background-color: red;
+  width: 13rem;
+}
+
+button.buttonwarning:hoover {
+  background-color: goldenrod;
+  width: 13rem;
+}
+
+
+button-warning {
   width: 14rem;
   background-color: red;
 }
+
 
 input[type="textarea"] {
   height: 7rem;
@@ -162,6 +194,14 @@ input[type="text"] {
   height: 4rem;
   width: 31rem;
   text-align: center;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  padding-top: 1em;
 }
 
 @media screen and (max-width:700px) {
