@@ -1,59 +1,71 @@
 <body>
 
 </div>
+  <h2>User Info</h2>
 <div class="card">
 
-  <h2>User Info</h2>
   <div>
     <form action="/users" method="POST">
       <div class="form-input">
-        <label for="username">Username</label>
-        <input type="text" name="username" required/>
+        <label for="username">Username:</label>
+        <br>
+        <input type="text" placeholder="Enter here.." name="username" required/>
       </div>
 
       <div class="form-input">
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" placeholder="Enter here.." />
+        <label for="firstName">First Name:</label>
+        <br>
+        <input type="text" name="firstName" placeholder="Enter here.." required/>
       </div>
 
        <div class="form-input">
-        <label for="lastName">Last Name</label >
-        <input type="text" name="lastName" placeholder="Enter here.." />
+        <label for="lastName">Last Name: </label >
+        <br>
+        <input type="text" name="lastName" placeholder="Enter here.." required/>
       </div>
 
        <div class="form-input">
-        <label for="Userinstagram">Instagram name</label>
-        <input type="text" name="Userinstagram" placeholder="Enter here.." />
+        <label for="Userinstagram">Instagram name: </label>
+        <br>
+        <input type="text" name="Userinstagram" placeholder="Enter here.."required />
       </div>
 
        <div class="form-input">
-        <label for="twitter">Twiiter Name?</label>
-        <input type="text" name="twitter" placeholder="Enter here.." />
+        <label for="twitter">Twiiter Name: </label>
+        <br>
+        <input type="text" name="twitter" placeholder="Enter here.."required />
       </div>
 
        <div class="form-input">
-        <label for="location">City</label>
-        <input type="text" name="location" placeholder="Enter here.." />
+        <label for="location">City: </label>
+        <br>
+        <input type="text" name="location" placeholder="Enter here.." required/>
       </div>
 
       <div class="form-input">
-        <label for="photoUrl">Photo</label>
+        <label for="photoUrl">Photo: </label>
+        <br>
         <input type="text" name="photoUrl" placeholder="copy a jpg link here"required/>
       </div>
 
       <div class="form-input">
-        <label for="description">What is fashion?</label>
+        <label for="description">What is fashion?: </label>
+        <br>
         <input type="text" name="description"  placeholder="Enter here.."required/>
       </div>
 
       <div class="form-input">
-        <label for="motto">Whats you fashion motto?</label>
+        <label for="motto">Whats you fashion motto?: </label>
+        <br>
         <input type="text" name="motto"  placeholder="Enter here.."required/>
       </div>
-
+<br>
       <div class="button-container flex-end">
         <input class="button primary" type="submit" value="Create User">
+        <button class="buttonwarning">
         <a href="/users" class="button warning">Cancel</a>
+
+        </button>
       </div>
     </form>
   </div>

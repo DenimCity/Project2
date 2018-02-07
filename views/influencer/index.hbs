@@ -1,57 +1,63 @@
-
- <button>
-  <a href="/users/{{userId}}">Back</a> 
- </button>  
-  </div>
+<button>
+  <a href="/users/{{userId}}">Back</a>
+</button>
+</div>
 </div>
 
 </div>
 
 <div class="wholeContainer">
 
-<div class="store-header">
-  <h1>These are {{user.firstName}}'s Influencers</h1>
-  <div class="button primary">
-    <a href="/users/{{user._id}}/influencer/new">Add a Influencer</a>
+
+
+
+  <div class="stores">
+  <div class="store-header">
+    <div class="button primary">
+      <h1>These are {{user.firstName}}'s Influencers</h1>
+      <a href="/users/{{user._id}}/influencer/new">Add a Influencer</a>
+    </div>
   </div>
-</div>
 
 
 
-<div class="stores">
-  {{#each user.influencers}}
-      <div>Name:{{this.name}}</div>
-      <div>Instagram:{{this.instagram}}</div> 
-      <div>City:{{this.location}}</div>
-      <div><a href="/users/{{user._id}}/influencer/{{this._id}}/style">See My Styles</a></div>
-      <div><img class="ifluencer" src="{{this.photoUrl}}" alt="broken"></div>
-      <hr>
-  {{/each}}
+    {{#each user.influencers}}
+    <div class="influencerWrapper">
+      <div>
+        <img class="ifluencer" class="imageInfluencer" src="{{this.photoUrl}}" alt="broken">
+      </div>
+      <div class="DescriptionWrapper">
+        <div>Name:
+          <div>{{this.name}} </div>
+        </div>
+        <div>Instagram:
+          <div>{{this.instagram}}</div>
+        </div>
+        <div>City:
+          <div>{{this.location}} </div>
+        </div>
+        {{!--
+        <div>
+          <a href="/users/{{user._id}}/influencer/{{this._id}}/style">See My Styles</a>
+        </div> --}}
+      </div>
+      
 
-<div class="stepper">
-  <a href="/users">Hme</a> 
-<div>
-  <a href="/users/{{userId}}">Back</a> 
+    </div>
+<hr>
+    {{/each}}
   </div>
-</div>
-
-</div>
 
 
- 
- <div>
-   {{#each user.influencer}}
-        {{#each this.style}}
-          {{this.img1}}
-          {{this.img2}}
-        {{/each}}
-     <div>
-       <a href="/users/{{../userId}}/influencer/{{../influencerId}}/style/{{this._id}}">
-         banana
-       </a>
-     </div>
-   {{/each}}
- </div>
+  <div>
+    {{#each user.influencer}} {{#each this.style}} {{this.img1}} {{this.img2}} {{/each}}
+    <div>
+      <a href="/users/{{../userId}}/influencer/{{../influencerId}}/style/{{this._id}}">
+        banana
+      </a>
+    </div>
+    {{/each}}
+  </div>
 
-  
+
 </div>

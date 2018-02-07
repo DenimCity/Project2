@@ -58,7 +58,7 @@ mongoose.connect(process.env.MONGODB_URI)
       name:'Rasheeda',
       instagram:'rasheedadabosschick',
       location:'Atlanta',
-      photoURl:'https://i.imgur.com/sCuY1aV.jpg',
+      photoURl:'https://i.imgur.com/PmOMUd3.png',
       style: [{
         img1:"https://i.imgur.com/NRnhMjw.jpg",
         img2:'https://i.imgur.com/1eds4Rl.jpg'
