@@ -1,59 +1,87 @@
 <body>
 
-</div>
 
-<div class="card">
 
-  <h2>Editting {{user.username}}</h2>
-  <div>
-    <form action="/users/{{user._id}}?_method=PUT" method="POST">
-      <div class="form-input">
-        <label for="username">Username:</label>
-        <input type="text" name="username" value="{{user.username}}" required/>
-      </div>
+  <div class="card">
 
-      <div class="form-input">
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" value="{{user.firstName}}" required/>
-      </div>
 
-      <div class="form-input">
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" value="{{user.lastName}}" required/>
-      </div>
-       <div class="form-input">
-        <label for="Userinstagram">Instagram name:</label>
-        <input type="text" name="Userinstagram" value="{{user.Userinstagram}}" required/>
-      </div>
+    <div>
+      <h2>Edit: {{user.username}}</h2>
+      <form action="/users/{{user._id}}?_method=PUT" method="POST">
+        <div class="form-input">
+          <label for="username">Username:</label>
+          <div>
 
-       <div class="form-input">
-        <label for="twitter">Twitter name:</label>
-        <input type="text" name="twitter" value="{{user.twitter}}" />
-      </div>
-       <div class="form-input">
-        <label for="location">City:</label>
-        <input type="text" name="location" value="{{user.location}}" />
-      </div>
-
-      <div class="form-input">
-        <label for="photoUrl">Photo Url:</label>
-        <input type="text" name="photoUrl" value="{{user.photoUrl}}" />
-      </div>
-      <div class="form-input">
-        <label for="description">Description of fashion?:</label>
-        <input type="text" name="description" value="{{user.description}}" />
-      </div>
-      <div class="form-input">
-        <label for="motto">Whats your motto?:</label>
-        <input type="text" name="motto" value="{{user.motto}}" />
-      </div>
-
-      <div class="button-container flex-end">
-        <input class="button primary" type="submit" value="Update Profile">
-        <a href="/users/{{user._id}}" class="button warning">Cancel</a>
-      </div>
-    </form>
+            <input type="text" name="username" value="{{user.username}}" required/>
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="firstName">First Name:</label>
+          <div>
+            <input type="text" name="firstName" value="{{user.firstName}}" required/>
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="lastName">Last Name:</label>
+          <div>
+            <input type="text" name="lastName" value="{{user.lastName}}" required/>
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="Userinstagram">Instagram name:</label>
+          <div>
+            <input type="text" name="Userinstagram" value="{{user.Userinstagram}}" required/>
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <div>
+            <label for="twitter">Twitter name:</label>
+            <div>
+            <input type="text" name="twitter" value="{{user.twitter}}" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="location">City:</label>
+          <div>
+            <input type="text" name="location" value="{{user.location}}" />
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="photoUrl">Photo:</label>
+          <div>
+            <input type="textarea" name="photoUrl" value="{{user.photoUrl}}" />
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="description">Description of fashion?:</label>
+          <div>
+            <input type="textarea" name="description" value="{{user.description}}" />
+          </div>
+        </div>
+        <br>
+        <div class="form-input">
+          <label for="motto">Whats your motto?:</label>
+          <div>
+            <input type="textarea" name="motto" value="{{user.motto}}" />
+          </div>
+        </div>
+        <br>
+        <div class="button-container flex-end">
+          <input class="button primary" type="submit" value="Update Profile">
+          <button class="button warning">
+            <a href="/users/{{user._id}}">Cancel</a>
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
 </body>
