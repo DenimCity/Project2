@@ -7,10 +7,6 @@
 </div>
 
 <div class="wholeContainer">
-
-
-
-
   <div class="stores">
   <div class="store-header">
     <div class="button primary">
@@ -18,9 +14,6 @@
       <a href="/users/{{user._id}}/influencer/new">Add a Influencer</a>
     </div>
   </div>
-
-
-
     {{#each user.influencers}}
     <div class="influencerWrapper">
       <div>
@@ -36,13 +29,7 @@
         <div>City:
           <div>{{this.location}} </div>
         </div>
-        {{!--
-        <div>
-          <a href="/users/{{user._id}}/influencer/{{this._id}}/style">See My Styles</a>
-        </div> --}}
       </div>
-      
-
     </div>
 <hr>
     {{/each}}

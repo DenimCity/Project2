@@ -38,7 +38,7 @@ router.post('/', (req, res)=> {
     })
 
   })
-
+//the route to find one individual user
 router.get('/:userId', (req, res) => {
   const userId = req.params.userId
 
@@ -53,7 +53,7 @@ router.get('/:userId', (req, res) => {
     })
 })
 
-
+//the route that pushes the user into the database
 router.put('/:userId', (req, res)=>{
   const userId = req.params.userId
   const updatedUserInfo = req.body
@@ -67,6 +67,7 @@ router.put('/:userId', (req, res)=>{
     })
 })
 
+//the route that finds the one user and allows to edit
 router.get('/:userId/edit', (req, res) => {
   const userId = req.params.userId
   console.log(userId)
@@ -77,7 +78,7 @@ router.get('/:userId/edit', (req, res) => {
       })
     })
 })
-
+//he route that allows you to find the one specific user and delete
 router.get('/:userId/delete', (req, res) => {
   const userId = req.params.userId
 
