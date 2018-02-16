@@ -1,43 +1,52 @@
-<body>
-
+<div class="UserOptionContainer">
   <h1>Meet: {{user.firstName}} {{user.lastName}}</h1>
+  <div>
 
-  <div class="user-container">
-    <div>
-      {{#if user.photoUrl}}
-      <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
-      <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
-    </div>
-    <div class="user-info">
-      <div class="button-container">
-        <div>Username:
-          <strong>{{user.username}}</strong>
-        </div>
-        <div>instagram:
-          <strong>{{user.Userinstagram}}</strong>
-        </div>
-        <div>twitter:
-          <strong>{{user.twitter}}</strong>
-        </div>
-        <div>Currently living in:
-          <strong>{{user.location}}</strong>
-        </div>
-        <div>What is fashion?:
-          <strong>{{user.description}}</strong>
-        </div>
-        <div>Whats your motto?:
-          <strong>{{user.motto}}</strong>
-        </div>
-        <div class="button primary">
-       <a href="/users/{{user._id}}/edit">Edit</a>
-        </div>
-        <div class="button warning">
-          <a href="/users/{{user._id}}/delete">Delete</a>
-        </div>
-        <div class="visit-store">
-          <a href="/users/{{user._id}}/influencer">Influenced By</a>
-        </div>
+    <div class="functionContainer">
+
+      <div class="functions">
+        <a href="/users/{{user._id}}/edit">Edit</a>
       </div>
+      <div class="functions">
+        <a href="/users/{{user._id}}/delete">Delete</a>
+      </div>
+      <div class="functions">
+        <a href="/users/{{user._id}}/influencer">Muse</a>
+      </div>
+
     </div>
   </div>
-</body>
+</div>
+
+
+<div class="user-container">
+  <div>
+    {{#if user.photoUrl}}
+    <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile photo"> {{else}}
+    <img src="https://picsum.photos/200/300" alt="{{user.username}}'s profile photo"> {{/if}}
+  </div>
+  <div class="user-info">
+      <div>Username: 
+        <strong>{{user.username}}</strong>
+      </div>
+      <div>instagram:
+        
+        <strong>{{user.Userinstagram}}</strong>
+      </div>
+      <div>twitter: 
+      
+        <strong>{{user.twitter}}</strong>
+      </div>
+      <div>Currently living in: 
+    
+        <strong>{{user.location}}</strong>
+      </div>
+      <div>What is fashion?: 
+        <strong>{{user.description}}</strong>
+      </div>
+      <div>Whats your motto?: 
+    
+        <strong>{{user.motto}}</strong>
+      </div>
+  </div>
+</div>
