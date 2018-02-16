@@ -66,6 +66,14 @@ h1 {
   opacity: 1;
 }
 
+.stepper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-content: end; */
+  align-items: center;
+}
+
 /* profiler card */
 
 .card {
@@ -75,6 +83,7 @@ h1 {
   font-family: arial;
   display: flex;
   padding: 60px;
+  justify-content: center;
 }
 
 .profile-card-container {
@@ -118,7 +127,8 @@ h1 {
 
 .user-container {
   display: flex;
-  max-width: 750px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-container img {
@@ -132,28 +142,30 @@ h1 {
   flex-direction: column;
   font-size: 2rem;
   justify-content: center;
+  font-size: 5rem;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 90% auto;
 }
+
 .influencerWrapper {
   display: flex;
   font-size: 4rem;
 }
 
-.NewButton{
+.NewButton {
   background-color: goldenrod;
-    width: 16rem;
-    font-size: 3rem;
-    border: 1px solid;
-    border-radius: 2rem;
-    text-align: center;
-    box-shadow: 13px 4px 12px 3px;
+  width: 16rem;
+  font-size: 3rem;
+  border: 1px solid;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 13px 4px 12px 3px;
 }
 
-.NewButton:hover{
+.NewButton:hover {
   background-color: green;
 }
 
@@ -162,23 +174,20 @@ input.button.primary {
   width: 14rem;
 }
 
-
 button.buttonwarning {
   background-color: red;
-  width: 13rem;
+  width: 15rem;
 }
 
 button.buttonwarning:hoover {
   background-color: goldenrod;
-  width: 13rem;
+  width: 17rem;
 }
-
 
 button-warning {
-  width: 14rem;
+  width: 15rem;
   background-color: red;
 }
-
 
 input[type="textarea"] {
   height: 7rem;
@@ -204,8 +213,44 @@ label {
   padding-top: 1em;
 }
 
-@media screen and (max-width:700px) {
-  .nav-link {
-    color: red;
-  }
+/* plus sign logo to create new users  */
+
+span {
+  font-size: 9rem;
 }
+
+/* the links to to delete, edit, and view new influencer  */
+
+.UserOptionContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.functionContainer {
+  display: flex;
+}
+
+.functions {
+  border: solid 1px black;
+  background-color: white;
+  width: 12rem;
+  height: 6rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 19px;
+  border-radius: 7px;
+}
+
+.functions:hover {
+  background-color: green;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 37px;
+}
+
+@media only screen and (max-width: 700px) {}
