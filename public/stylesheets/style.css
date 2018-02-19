@@ -289,7 +289,7 @@ button.createNewBtn {
   background-color: lawngreen;
 }
 .backBtn {
-  background-color: #228AE6;
+  background-color: silver;
   font-size: 3rem;
   width: 11rem;
   height: 5rem;
@@ -303,3 +303,11 @@ button.createNewBtn {
   font-size:3rem;
 }
 
+.viewProfBtn {
+  background-color: silver;
+  font-size: 2rem;
+  margin-top: 2rem;
+  width: 14rem;
+  height: 3rem;
+  box-shadow: 7px 4px 4px 3px;
+}
