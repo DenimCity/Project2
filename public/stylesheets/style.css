@@ -16,6 +16,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color:black;
 }
 
 li {
@@ -74,6 +75,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 112vw;
 }
 
 /* profiler card */
@@ -86,6 +88,7 @@ h1 {
   display: flex;
   padding: 60px;
   justify-content: center;
+  font-size: 2rem;
 }
 
 .profile-card-container {
@@ -122,10 +125,9 @@ h1 {
 }
 
 .user-card img {
-  height: 31rem;
-  width: 48rem;
+  height: 200px;
+  width: 200px;
 }
-
 
 .user-container {
   display: flex;
@@ -134,17 +136,19 @@ h1 {
 }
 
 .user-container img {
-  height: 256px;
-  width: 256px;
+  height: 31rem;
+  width: 48rem;
+  border-radius: 4rem;
+    border: 2px solid black;
 }
 
 .user-info {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
   justify-content: center;
-  font-size: 5rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .wrapper {
@@ -173,12 +177,16 @@ h1 {
 
 input.button.primary {
   background-color: green;
-  width: 14rem;
+    width: 17rem;
+    height: 5rem;
+    font-size: 2rem;
 }
 
 button.buttonwarning {
   background-color: red;
-  width: 15rem;
+  width: 17rem;
+  height: 5rem;
+  font-size: 2rem;
 }
 
 button.buttonwarning:hoover {
@@ -198,6 +206,7 @@ text-align: -webkit-left;
 border: solid 1px;
 box-shadow: 9px 5px 3px 2px;
 text-align: center;
+font-size: 2rem;
 }
 
 input[type="text"] {
@@ -205,6 +214,7 @@ box-shadow: 14px 6px 7px 1px;
 height: 4rem;
 width: 31rem;
 text-align: center;
+font-size: 3rem;
 }
 
 label {
@@ -213,6 +223,7 @@ max-width: 100%;
 margin-bottom: 5px;
 font-weight: 700;
 padding-top: 1em;
+font-size: 4rem;
 }
 
 /* plus sign logo to create new users  */
@@ -249,7 +260,7 @@ border-radius: 7px;
 }
 
 .functions:hover {
-background-color: green;
+background-color: goldenrod;
 cursor: pointer;
 border-radius: 12px;
 font-size: 37px;
@@ -266,3 +277,29 @@ grid-template-columns: 50% 50%;
 width: 64rem;
 grid-gap: 4rem;
 }
+
+button.createNewBtn {
+  width: 13rem;
+  height: 3rem;
+  background: green;
+  font-size: 28px;
+}
+
+.backBtn:hover {
+  background-color: lawngreen;
+}
+.backBtn {
+  background-color: #228AE6;
+  font-size: 3rem;
+  width: 11rem;
+  height: 5rem;
+  font-weight: 400;
+  box-shadow: 4px 2px 2px 4px grey;
+  margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.createNewInfluencer{
+  font-size:3rem;
+}
+
