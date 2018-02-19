@@ -2,7 +2,7 @@
 <div class="card">
 
   <div>
-  <h2>Add A New Influencer:</h2>
+  <h2>Create New Influencer:</h2>
     
     <form action="/users/{{userId}}/influencer" method="POST">
       <div class="form-input">
@@ -22,12 +22,12 @@
 
       <div class="form-input">
         <label for="photoUrl">PhotoUrl:</label>
-        <input type="text" name="photoUrl">
+        <input type="text" value="https://18429-presscdn-0-68-pagely.netdna-ssl.com/wp-content/uploads/2016/07/medium-default-avatar.png" name="photoUrl">
       </div>
 
-      <div class="button-container flex-end">
-        <input class="button primary" type="submit" value="Create Influencer">
-        <button class="buttonwarning ">
+      <div >
+        <input type="submit" value="Create Influencer">
+        <button >
         <a href="/users/{{userId}}" >Cancel</a>
 
         </button>

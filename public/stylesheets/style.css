@@ -181,83 +181,87 @@ button.buttonwarning {
 }
 
 button.buttonwarning:hoover {
-  background-color: goldenrod;
-  width: 17rem;
+background-color: goldenrod;
+width: 17rem;
 }
 
 button-warning {
-  width: 15rem;
-  background-color: red;
+width: 15rem;
+background-color: red;
 }
 
 input[type="textarea"] {
-  height: 7rem;
-  width: 39rem;
-  text-align: -webkit-left;
-  border: solid 1px;
-  box-shadow: 9px 5px 3px 2px;
-  text-align: center;
+height: 7rem;
+width: 39rem;
+text-align: -webkit-left;
+border: solid 1px;
+box-shadow: 9px 5px 3px 2px;
+text-align: center;
 }
 
 input[type="text"] {
-  box-shadow: 14px 6px 7px 1px;
-  height: 4rem;
-  width: 31rem;
-  text-align: center;
+box-shadow: 14px 6px 7px 1px;
+height: 4rem;
+width: 31rem;
+text-align: center;
 }
 
 label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: 700;
-  padding-top: 1em;
+display: inline-block;
+max-width: 100%;
+margin-bottom: 5px;
+font-weight: 700;
+padding-top: 1em;
 }
 
 /* plus sign logo to create new users  */
 
 span {
-  font-size: 9rem;
+font-size: 9rem;
 }
 
 /* the links to to delete, edit, and view new influencer  */
 
 .UserOptionContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 }
 
 .functionContainer {
-  display: flex;
+display: flex;
 }
 
 .functions {
-  border: solid 1px black;
-  background-color: white;
-  width: 12rem;
-  height: 6rem;
-  margin: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 19px;
-  border-radius: 7px;
+border: solid 1px black;
+background-color: white;
+width: 12rem;
+height: 6rem;
+margin: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 19px;
+border-radius: 7px;
 }
 
 .functions:hover {
-  background-color: green;
-  cursor: pointer;
-  border-radius: 12px;
-  font-size: 37px;
+background-color: green;
+cursor: pointer;
+border-radius: 12px;
+font-size: 37px;
 }
 
 .influencerWrapper{
-  display:flex;
-  flex-direction: row;
-  align-content: center;
-flex-wrap: wrap;
+display:flex;
 justify-content: center;
+}
+
+.influencerGrid{
+display: grid;
+grid-template-columns: 50% 50%;
+width: 64rem;
+grid-gap: 4rem;
 }
