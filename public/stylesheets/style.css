@@ -57,6 +57,7 @@ h1 {
   position: relative;
   opacity: .5;
   box-shadow: 16px 3px 8px 3px;
+  width: 112vw;
 }
 
 .hero-text {
