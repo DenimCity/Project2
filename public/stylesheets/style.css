@@ -283,6 +283,7 @@ button.createNewBtn {
   height: 3rem;
   background: green;
   font-size: 28px;
+  margin-bottom: 2rem;
 }
 
 .backBtn:hover {
