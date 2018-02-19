@@ -1,21 +1,29 @@
-<button>
-  <a href="/users/{{userId}}">Back</a>
-</button>
-</div>
-</div>
-
+ <div>
+ <a href="/users/{{userId}}">
+<button>Back</button>
+  </a>
 </div>
 
-<div class="wholeContainer">
-  <div class="stores">
+</div>
+
+
   <div class="store-header">
     <div class="button primary">
       <h1>These are {{user.firstName}}'s Influencers</h1>
-      <a href="/users/{{user._id}}/influencer/new">Add a Influencer</a>
     </div>
   </div>
+  
+      <a href="/users/{{user._id}}/influencer/new">
+        <div>Add a Influencer</div>
+      </a>
+  <div class="influencerWrapper">
+  
+
+    
+
+  <div>
     {{#each user.influencers}}
-    <div class="influencerWrapper">
+    <div>
       <div>
         <img class="ifluencer" class="imageInfluencer" src="{{this.photoUrl}}" alt="broken">
       </div>
@@ -31,9 +39,12 @@
         </div>
       </div>
     </div>
-<hr>
     {{/each}}
   </div>
+
+
+  </div>
+  
 
 
   <div>
@@ -47,4 +58,3 @@
   </div>
 
 
-</div>
