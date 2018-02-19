@@ -7,21 +7,21 @@
 </div>
 
 
-  <div class="store-header">
-    <div class="button primary">
-      <h1>These are {{user.firstName}}'s Influencers</h1>
+  <div>
+    <div>
+      <h1>{{user.firstName}}'s Influencers</h1>
     </div>
   </div>
   
       <a href="/users/{{user._id}}/influencer/new">
-        <div>Add a Influencer</div>
+        <button>Add Influencer</button>
       </a>
   <div class="influencerWrapper">
   
 
     
 
-  <div>
+  <div class="influencerGrid">
     {{#each user.influencers}}
     <div>
       <div>
@@ -47,7 +47,7 @@
   
 
 
-  <div>
+  {{!-- <div>
     {{#each user.influencer}} {{#each this.style}} {{this.img1}} {{this.img2}} {{/each}}
     <div>
       <a href="/users/{{../userId}}/influencer/{{../influencerId}}/style/{{this._id}}">
@@ -55,6 +55,6 @@
       </a>
     </div>
     {{/each}}
-  </div>
+  </div> --}}
 
 
