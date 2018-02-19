@@ -187,6 +187,7 @@ button.buttonwarning {
   width: 17rem;
   height: 5rem;
   font-size: 2rem;
+  border-radius: 40px;
 }
 
 button.buttonwarning:hoover {
@@ -197,6 +198,7 @@ width: 17rem;
 button-warning {
 width: 15rem;
 background-color: red;
+border-radius: 40px;
 }
 
 input[type="textarea"] {
