@@ -1,6 +1,6 @@
 img {
-  max-height: 600px;
-  max-width: 400px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /* the navigation bar */
@@ -122,10 +122,10 @@ h1 {
 }
 
 .user-card img {
-  height: 200px;
-  width: 200px;
-  background: white;
+  height: 31rem;
+  width: 48rem;
 }
+
 
 .user-container {
   display: flex;
