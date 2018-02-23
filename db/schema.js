@@ -1,113 +1,72 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-
 //promises "then" and "catch" variables
 mongoose.Promise = global.Promise;
-
-
 const StyleSchema = new Schema({
-  
   img1: {
-    type: String,
-    
+    type: String
   },
-  
   img2: {
-    type: String,
-  
-  },
-
-}, 
-
-{
+    type: String
+  }
+}, {
   timestamps: {},
   usePushEach: true
-}
-)
-
-
+})
 const InfluencerSchema = new Schema({
-
   name: {
-    type: String,
-   
+    type: String
   },
   instagram: {
-    type: String,
-   
+    type: String
   },
-
   location: {
-    type: String,
-    
+    type: String
   },
   photoUrl: {
-    type: String,
-
+    type: String
   },
-
   style: [StyleSchema]
-
-},
-  {
-    timestamps: {},
-    usePushEach: true
-  }
-)
-
+}, {
+  timestamps: {},
+  usePushEach: true
+})
 const UserSchema = new Schema({
   username: {
-    type: String,
-    
+    type: String
   },
   firstName: {
-    type: String,
-   
+    type: String
   },
   lastName: {
-    type: String,
-    
+    type: String
   },
   Userinstagram: {
-    type: String,
-    
-    
+    type: String
   },
   twitter: {
-    type: String,
-    
-    
+    type: String
   },
-
   location: {
-    type: String,
-    
-
+    type: String
   },
   photoUrl: {
     type: String,
-    default: 'http://www.clipartlord.com/wp-content/uploads/2014/04/egg4.png',
+    default: 'http://www.clipartlord.com/wp-content/uploads/2014/04/egg4.png'
   },
   description: {
-    type: String,
-    
+    type: String
   },
-
   motto: {
-    type: String,
-    
+    type: String
   },
 
   influencers: [InfluencerSchema]
-
-},
-  {
-    timestamps: {},
-    usePushEach: true
-  }
-)
-
+}, {
+  timestamps: {},
+  usePushEach: true
+})
 
 module.exports = {
   UserSchema,
