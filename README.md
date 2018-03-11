@@ -51,18 +51,13 @@ Online Resources
 Version 2: 
 -
 
-1. Reformatting website display.
+1. Add social media links at the bottom of  the page.
 
-2. Add removing dead links and adding functionality.
+2. Adjust the display and image size of the different pages.
 
-3. Add social media links at the bottom of  the page.
+3. Allowing influencers the option to upload photos and display appropiately usign their local library.
 
-4. Adjust the display and image size of the different pages.
 
-5. Mobile friendly.
-
-6. Allowing influencers the option to upload photos and display appropiately.
-7. Add a upload button
 
 
 
