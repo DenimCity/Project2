@@ -38,7 +38,6 @@ router.get('/:influencerId', (req, res) => {
       res.render('influencer/show', {
         userId,
         influencer,
-        
       })
     })
     .catch((error) => {
@@ -107,9 +106,6 @@ router.get('/:influencerId/delete', (req, res) => {
       console.log(error)
     })
 })
-
-
-
 
 
 module.exports = router
