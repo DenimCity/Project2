@@ -6,7 +6,7 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
-
+const morgan = require('morgan')
 
 
 
@@ -44,48 +44,34 @@ app.get('/', (request, response) => {
   response.redirect('/users')
 })
 
-///the controllers control the path and actions
-//homePAge
+
+app.use(morgan('dev'))
+app.use(bodyParser.json());
+
 const indexController = require('./routes/indexController')
 app.use('/', indexController)
 
-//users page
 const userController = require('./routes/userController')
 app.use('/users', userController)
-//influencers page
+
 const influencerController = require('./routes/influencerController.js')
 app.use('/users/:userId/influencer', influencerController)
 
-// style page
 const styleController = require('./routes/styleController')
 app.use('/users/:userId/influencer/:influencerId/style', styleController)
 
 
 
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 app.use(logger('dev'))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  const err = new Error('Not Found')
-  err.status = 404
-  next(err)
-})
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
-
-  // render the error page
-  res.status(err.status || 500)
-  res.render('error')
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`your server - Api is running on port + ${PORT}`);
 })
 
 module.exports = app

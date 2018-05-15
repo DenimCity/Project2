@@ -5,10 +5,6 @@ const User = require('../db/models/User')
 const Style = require('../db/models/Style')
 
 
-/* GET Users listing. */
-
-
-
 router.get('/', (req, res) => {
   const userId = req.params.userId 
   const influencerId = req.params.influencerId
@@ -16,7 +12,7 @@ router.get('/', (req, res) => {
     .then((user) => {
       const influencer = user.influencer.id(influencerId)
   
-      res.render('style/index',{
+      res.json('style/index',{
     userId,
     user,
     influencer
@@ -35,7 +31,7 @@ router.get('/:stlyeId', (req, res) => {
       const style = user.style.id(influencerId)
       const gift = style.giftstyleturn.id(stlyeId)
 
-      res.render('stlyes/show', {
+      res.json('stlyes/show', {
         userId,
         influencerId,
         style,
@@ -56,7 +52,7 @@ router.get('/new', (req, res) => {
     .then((user) => {
       const stlye = user.stlyes.id(influencerId)
 
-      res.render('style/new', {
+      res.json('style/new', {
         userId,
         influencerId,
        

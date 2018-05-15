@@ -2,22 +2,19 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-//promises "then" and "catch" variables
+
 mongoose.Promise = global.Promise;
 
 
 const StyleSchema = new Schema({
   
   img1: {
-    type: String,
-    
+    type: String, 
   },
   
   img2: {
     type: String,
-  
   },
-
 }, 
 
 {
