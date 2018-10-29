@@ -6,7 +6,6 @@
     ],
     "rules": {
         "comma-dangle": ["error", "only-multiline"],
-        "import/no-commonjs": 2,
         "indent": [ "error", 4 ],
         "max-len": ["error", { "code": 140 }],
         "object-shorthand": 0,
