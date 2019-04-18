@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 //promises "then" and "catch" variables
@@ -68,7 +68,7 @@ const UserSchema = new Schema({
   usePushEach: true
 })
 
-module.exports = {
+export {
   UserSchema,
   StyleSchema,
   InfluencerSchema

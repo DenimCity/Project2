@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = require('../schema')
+import mongoose from 'mongoose'
+import { StyleSchema } from '../schema'
 
-const Style = mongoose.model('Style', Schema.StyleSchema)
-
-module.exports = Style
+const Stylist = mongoose.model('stylist', StyleSchema)
+export default Stylist

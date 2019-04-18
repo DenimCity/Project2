@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = require('../schema')
-const Influencer = mongoose.model('Influencer', Schema.InfluencerSchema)
+import mongoose from 'mongoose';
+import { InfluencerSchema } from '../schema';
 
-module.exports = Influencer
+const Influencer = mongoose.model('influencer', InfluencerSchema);
+export default Influencer

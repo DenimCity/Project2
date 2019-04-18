@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = require('../schema')
+import mongoose from 'mongoose'
+import { UserSchema } from '../schema'
 
-const User = mongoose.model('User', Schema.UserSchema)
-
-module.exports = User
+const User = mongoose.model('user', UserSchema)
+export default User
