@@ -1,22 +1,31 @@
-const express = require('express')
+import express from 'express'
+import logger from '../util/logger'
 const router = express.Router({ mergeParams: true })
-const User = require('../db/models/User')
-const bodyParser = require('body-parser')
 
-///when the user types localhost3000/user this page loads 
-///using this command
-router.get('/', (req, res) => {
-  console.log("style here")
-  User.find({})
-    .then((users) => {
-      res.render('users/index', {
-        users,
+import User from '../db/models/User'
+import bodyParser from 'body-parser'
 
-      })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+
+router.get('/', async (req, res) => {
+  logger.debug("style here")
+
+  try {
+    // const users = await User.find({})
+    // console.log(users)
+    res.json({message: 'HI'})
+  } catch (e) {
+    logger.warn(`Error retrieving users. Message: ${ e.message }`)
+  }
+  // User.find({})
+  //   .then((users) => {
+  //     res.render('users/index', {
+  //       users,
+
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error)
+  //   })
 })
 
 
@@ -68,15 +77,11 @@ router.put('/:userId', (req, res)=>{
 })
 
 //the route that finds the one user and allows to edit
-router.get('/:userId/edit', (req, res) => {
+router.get('/:userId/edit', async (req, res) => {
   const userId = req.params.userId
-  console.log(userId)
-  User.findById(userId)
-    .then((user) => {
-      res.render('users/edit', {
-        user
-      })
-    })
+  const user = await User.findById(userId)
+  console.log(user)
+    
 })
 //he route that allows you to find the one specific user and delete
 router.get('/:userId/delete', (req, res) => {
@@ -96,4 +101,4 @@ router.get('/:userId/delete', (req, res) => {
 
 
 
-module.exports = router
+export default router
