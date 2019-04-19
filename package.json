@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development nodemon index.js",
-    "start:local": "NODE_ENV=PRODUCTION node index.js"
+    "start:local": "NODE_ENV=PRODUCTION node index.js",
+    "lint": "./node_modules/.bin/eslint --ext js,jsx --max-warnings 0 ."
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -17,8 +18,12 @@
     "log4js": "^4.1.0",
     "method-override": "^2.3.10",
     "mongoose": "^5.0.0-rc2",
-    "morgan": "~1.9.0",
-    "nodemon": "^1.14.7",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.18.11"
   }
 }
