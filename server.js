@@ -5,9 +5,7 @@ import mongoose from 'mongoose';
 import path from 'path';
 
 import logger from './util/logger';
-import styleController from './routes/styleController';
-import userController from './routes/userController';
-import influencerController from './routes/influencerController';
+import { router } from './routes';
 
 require('dotenv').config();
 
@@ -25,7 +23,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 
@@ -41,10 +38,7 @@ mongoose.connection.on('error', (error) => {
     process.exit(-1);
 });
 
-
-app.use('/users', userController);
-app.use('/users/:userId/influencer', influencerController);
-app.use('/users/:userId/influencer/:influencerId/style', styleController);
+app.use('/', router);
 
 
 app.listen(PORT, () => {
