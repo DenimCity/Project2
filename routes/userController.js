@@ -1,104 +1,89 @@
-import express from 'express'
-import logger from '../util/logger'
-const router = express.Router({ mergeParams: true })
+import express from 'express';
 
-import User from '../db/models/User'
-import bodyParser from 'body-parser'
+import prettyPrint from '../util/prettyPrint';
+import logger from '../util/logger';
+import User from '../db/models/User';
 
+const router = express.Router({ mergeParams: true });
 
 router.get('/', async (req, res) => {
-  logger.debug("style here")
-
-  try {
-    // const users = await User.find({})
-    // console.log(users)
-    res.json({message: 'HI'})
-  } catch (e) {
-    logger.warn(`Error retrieving users. Message: ${ e.message }`)
-  }
-  // User.find({})
-  //   .then((users) => {
-  //     res.render('users/index', {
-  //       users,
-
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error)
-  //   })
-})
+    try {
+        const users = await User.find({});
+        if (!users.length) {
+            throw new Error('No users found');
+        }
+        logger.debug(`New User data received: ${ prettyPrint(users) }`);
+        return res.status(200).send({ users: users });
+    } catch (e) {
+        logger.warn(`Error retrieving users. Message: ${ e.message }`);
+        return res.status(404).send({ error: e.message });
+    }
+});
 
 
-
-//the route to create a new  new user
-router.get('/new', (req, res) => {
-  res.render('users/new')
-})
-
-router.post('/', (req, res)=> {
-  const newUser = req.body 
-    console.log(`new user ${newUser}`)
-    User.create(newUser)
-    .then(() => {
-      res.redirect('/users')
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-
-  })
-//the route to find one individual user
-router.get('/:userId', (req, res) => {
-  const userId = req.params.userId
-
-  User.findById(userId)
-    .then((user) => {
-      res.render('users/show', {
-        user
-      })
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-})
-
-//the route that pushes the user into the database
-router.put('/:userId', (req, res)=>{
-  const userId = req.params.userId
-  const updatedUserInfo = req.body
-
-    User.findByIdAndUpdate(userId, updatedUserInfo)
-    .then(()=>{
-        res.redirect(`/users/${userId}`)
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
-})
-
-//the route that finds the one user and allows to edit
-router.get('/:userId/edit', async (req, res) => {
-  const userId = req.params.userId
-  const user = await User.findById(userId)
-  console.log(user)
-    
-})
-//he route that allows you to find the one specific user and delete
-router.get('/:userId/delete', (req, res) => {
-  const userId = req.params.userId
-
-  User.findByIdAndRemove(userId)
-    .then(() => {
-      res.redirect('/users')
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-})
+router.post('/', async (req, res) => {
+    const newUser = req.body;
+    try {
+        const user = await User.create(newUser);
+        logger.debug(`New User data received: ${ prettyPrint(newUser) }`);
+        logger.debug(`User create: ${ prettyPrint(user) }`);
+        res.send({ created: newUser });
+    } catch (e) {
+        logger.warn(`Error creating user. Message: ${ e.message }`);
+        res.status(404).send({ error: e.message });
+    }
+});
 
 
+router.get('/:userId', async (req, res) => {
+    const { userId } = req.params;
+    try {
+        const user = await User.findById(userId);
+        if (!user) {
+            throw new Error('No user found');
+        }
+        logger.debug(`User Found: ${ prettyPrint(user) }`);
+        return res.send({ user });
+    } catch (e) {
+        logger.warn(`Error finding ${ userId }. Message: ${ e.message }`);
+        return res.status(404).send({ error: e.message });
+    }
+});
 
 
+router.put('/:userId', async (req, res) => {
+    const { userId } = req.params;
+    const updatedUserInfo = req.body;
+
+    try {
+        const updatedUser = await User.findByIdAndUpdate(userId, updatedUserInfo);
+        if (!updatedUser) {
+            throw new Error(`Error updating ID: ${ userId }`);
+        }
+        logger.debug(`User upated: ${ prettyPrint(updatedUser) }`);
+        return res.send({ updatedUser });
+    } catch (e) {
+        logger.warn(`Error updating ${ userId }. Message: ${ e.message }`);
+        return res.status(404).send({ error: e.message });
+    }
+});
 
 
-export default router
+router.delete('/:userId', async (req, res) => {
+    const { userId } = req.params;
+
+    try {
+        const user = await User.findByIdAndDelete(userId);
+        if (!user) {
+            throw new Error(`Error deleting ID: ${ userId }`);
+        }
+        logger.debug(`User ID: ${ userId } deleted `);
+        return res.send({ user });
+    } catch (e) {
+        logger.warn(`Error deleting ${ userId }. Message: ${ e.message }`);
+        return res.status(404).send({ error: e.message });
+    }
+});
+
+
+export default router;
