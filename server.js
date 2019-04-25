@@ -18,29 +18,35 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
-    res.append('Access-Control-Allow-Methods', 'OPTIONS');
-    res.append('Cache-Control', 'no-store');
-    next();
+  res.append('Access-Control-Allow-Methods', 'OPTIONS');
+  res.append('Cache-Control', 'no-store');
+  next();
 });
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 
 mongoose.connection.once('open', () => {
-    logger.info('Mongoose has connected to MongoDB!');
+  logger.info(`
+  Mongoose has connected to MongoDB!`);
 });
 
-mongoose.connection.on('error', (error) => {
-    logger.error(`
+mongoose.connection.on('error', error => {
+  logger.error(`
     MongoDB connection error!!! 
-    ${ error }
+    ${error}
   `);
-    process.exit(-1);
+  process.exit(-1);
 });
 
 app.use('/', router);
 
-
-app.listen(PORT, () => {
-    logger.info(`Server running on port: ${ PORT }`);
+app.listen(PORT, err => {
+  if (err) {
+    return logger.info(`
+    Application failed to start. 
+    Message: ${err.message}`);
+  }
+  logger.info(`
+  Server running on port: ${PORT}`);
 });
