@@ -89,7 +89,7 @@ const Ozzie = new User({
 });
 
 // If you want to delete all the seeded data first use User.deleteMany({})
-User.create()
+const seedDB = () => User.create()
     .then(() => {
         logger.debug('1st seed planted');
         return Jean.save();
@@ -118,7 +118,7 @@ User.create()
         logger.error(`Houston, we have a problem, ERROR SAVING SEEDED DATA. Error message: ${ err.message }`);
     });
 
-
+export default seedDB;
 /*
 const collectionName = 'fashion_depo';
 

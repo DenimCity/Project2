@@ -79,5 +79,4 @@ export default {
             return res.status(404).send({ error: e.message });
         }
     }
-
 };
