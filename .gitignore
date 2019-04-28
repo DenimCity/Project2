@@ -32,3 +32,5 @@ npm-debug.log
 .env
 package-lock.json
 *.http
+.idea 
+.sonarlit
