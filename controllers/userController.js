@@ -4,16 +4,14 @@ import prettyPrint from '../util/prettyPrint';
 import logger from '../util/logger';
 import User from '../db/models/User';
 
-
 export default {
-
     getUsers: async (req, res) => {
         try {
             const users = await User.find({});
             if (!users.length) {
                 throw new Error('No users found');
             }
-            logger.debug(`New User data received: ${ prettyPrint(users) }`);
+            logger.debug(`Querying UserData: ${ prettyPrint(users) }`);
             return res.status(200).send({ users: users });
         } catch (e) {
             logger.warn(`Error retrieving users. Message: ${ e.message }`);
@@ -75,10 +73,11 @@ export default {
                 throw new Error(`Error deleting ID: ${ userId }`);
             }
             logger.debug(`User ID: ${ userId } deleted `);
-            return res.send({ user });
+            return res.send({ message: `User ${ userId } has been deleted.` });
         } catch (e) {
             logger.warn(`Error deleting ${ userId }. Message: ${ e.message }`);
             return res.status(404).send({ error: e.message });
         }
     }
+
 };
