@@ -14,7 +14,7 @@ import router from './routes';
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 1748;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(cookieParser());
