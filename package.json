@@ -3,13 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development nodemon index.js",
-    "start:local": "NODE_ENV=PRODUCTION node index.js",
-    "lint": "./node_modules/.bin/eslint --ext js,jsx --max-warnings 0 ."
+    "server": "node index.js",
+    "backend": "nodemon index.js",
+    "dev": "NODE_ENV=DEV concurrently  --kill-others-on-fail \"nodemon index.js\" \"npm run client\"",
+    "start": "NODE_ENV=PRODUCTION concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "lint": "./node_modules/.bin/eslint --ext js,jsx --max-warnings 0 .",
+    "client": "cd ./client  && npm run start"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:5000",
+      "changeOrigin": true
+    }
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^4.1.0",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^4.0.0",
     "esm": "^3.2.22",
     "express": "^4.16.4",
@@ -19,7 +30,6 @@
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",

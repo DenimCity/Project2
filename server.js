@@ -1,5 +1,6 @@
-import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
@@ -20,12 +21,14 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
 
 app.use((req, res, next) => {
     res.append('Access-Control-Allow-Methods', 'OPTIONS');
     res.append('Cache-Control', 'no-store');
     next();
 });
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
