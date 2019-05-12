@@ -1,12 +1,9 @@
-const express = require('express');
-
-const router = express.Router({ mergeParams: true });
-const influencer = require('../db/models/Influencer');
-const User = require('../db/models/User');
+import { User } from '../db/models';
+import { logger } from '../util';
 
 
 /* GET influencer listing. */
-router.get('/', (req, res) => {
+const getInfluencer = async (req, res) => {
     const userId = req.params.userId;
     User.findById(userId)
         .then((user) => {
@@ -15,20 +12,12 @@ router.get('/', (req, res) => {
             });
         })
         .catch((error) => {
-            console.log(error);
+            logger.debug(error);
         });
-});
+};
 
-router.get('/new', (req, res) => {
-    const userId = req.params.userId;
 
-    res.render('influencer/new', {
-        userId,
-
-    });
-});
-
-router.get('/:influencerId', (req, res) => {
+const getOneInfluencer = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
 
@@ -41,11 +30,11 @@ router.get('/:influencerId', (req, res) => {
             });
         })
         .catch((error) => {
-            console.log(error);
+            logger.debug(error);
         });
-});
+};
 
-router.post('/', (req, res) => {
+const createInfluencer = (req, res) => {
     const userId = req.params.userId;
     const newInfluencer = req.body;
 
@@ -58,15 +47,15 @@ router.post('/', (req, res) => {
             res.redirect(`/users/${ userId }/influencer`);
         })
         .catch((error) => {
-            console.log(error);
+            logger.debug(error);
         });
-});
+};
 // NOW UPDATE THE EXISTING USER PROFILE
-router.put('/:influencerId', (req, res) => {
+const updateInfluencer = (req, res) => {
     const userId = req.params.userId;
     const updatedInfluencerInfo = req.body;
     const influencerId = req.params.influencerId;
-    console.log(updatedInfluencerInfo);
+    logger.debug(updatedInfluencerInfo);
 
     User.findById(userId)
         .then((user) => {
@@ -84,10 +73,10 @@ router.put('/:influencerId', (req, res) => {
         .then(() => {
             res.redirect(`/users/${ userId }`);
         });
-});
+};
 
 
-router.get('/:influencerId/delete', (req, res) => {
+const deleteInfluencer = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
 
@@ -100,9 +89,15 @@ router.get('/:influencerId/delete', (req, res) => {
             res.redirect(`/users/${ userId }/influencer/`);
         })
         .catch((error) => {
-            console.log(error);
+            logger.debug(error);
         });
-});
+};
 
 
-module.exports = router;
+export {
+    createInfluencer,
+    deleteInfluencer,
+    getInfluencer,
+    getOneInfluencer,
+    updateInfluencer
+};

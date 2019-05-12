@@ -1,14 +1,7 @@
-const express = require('express');
+import { User } from '../db/models';
+import { logger } from '../util';
 
-const router = express.Router({ mergeParams: true });
-const influencer = require('../db/models/Influencer');
-const User = require('../db/models/User');
-const Style = require('../db/models/Stylist');
-
-
-/* GET Users listing. */
-
-router.get('/', (req, res) => {
+const getStylists = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
     User.findById(userId)
@@ -20,17 +13,17 @@ router.get('/', (req, res) => {
                 influencer
             });
         });
-});
+};
 
-router.get('/:stlyeId', (req, res) => {
+const getStylistsById = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
-    const stlyeId = req.params.stlyeId;
+    // const stlyeId = req.params.stlyeId;
 
     User.findById(userId)
         .then((user) => {
             const style = user.style.id(influencerId);
-            const gift = style.giftstyleturn.id(stlyeId);
+            // const gift = style.giftstyleturn.id(stlyeId);
 
             res.render('stlyes/show', {
                 userId,
@@ -40,26 +33,27 @@ router.get('/:stlyeId', (req, res) => {
             });
         })
         .catch((error) => {
-            console.log(error);
+            logger.debug(error);
         });
-});
+};
 
 
-router.get('/new', (req, res) => {
+const getStylistByID = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
 
     User.findById(userId)
         .then((user) => {
             const stlye = user.stlyes.id(influencerId);
+            logger.debug(stlye);
             res.render('style/new', {
                 userId,
                 influencerId,
             });
         });
-});
+};
 
-router.post('/', (req, res) => {
+const createStylist = (req, res) => {
     const userId = req.params.userId;
     const influencerId = req.params.influencerId;
     const stlye = req.body;
@@ -73,6 +67,11 @@ router.post('/', (req, res) => {
         .then(() => {
             res.redirect(`/users/${ userId }/style/${ influencerId }`);
         });
-});
+};
 
-module.exports = router;
+export {
+    createStylist,
+    getStylists,
+    getStylistByID,
+    getStylistsById
+};
